@@ -8,7 +8,7 @@ import garageDoor2Front from '../images/garageDoor2Front.jpg';
 
 const CarouselHero = () => {
   return (
-    <div id="hero">
+    <div className="carouselContainer" id="hero">
         <Carousel data-bs-theme="dark">
             {/* First Image */}
             <Carousel.Item>

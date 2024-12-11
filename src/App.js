@@ -10,25 +10,44 @@ import Footer from './components/Footer';
 function App() {
 
   const servicesRef = useRef(null);
+  const contactRef = useRef(null);
+  const reviewsRef = useRef(null);
 
-  const handleScrollToServices = () => {
-    servicesRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const handleScrollToSection = (ref) => {
+    const offset = 180; // Adjust this value based on Navbar height
+    if (ref.current) {
+      const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
     <div className="App">
 
-      <Navigation onServicesClick={handleScrollToServices} />
+      <Navigation 
+        onServicesClick={() => handleScrollToSection(servicesRef)}
+        onContactClick={() => handleScrollToSection(contactRef)}
+        onReviewsClick={() => handleScrollToSection(reviewsRef)}
+      />
 
       <CarouselHero />
 
       <div ref={servicesRef}>
         <Services />
       </div>
-      
-      <Contact />
 
-      <Testimonials />
+      <div ref={contactRef}>
+        <Contact />
+      </div>
+
+      <div ref={reviewsRef}>
+        <Testimonials />
+      </div>
 
       <Footer />
 
