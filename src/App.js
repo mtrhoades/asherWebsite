@@ -14,7 +14,7 @@ function App() {
   const reviewsRef = useRef(null);
 
   const handleScrollToSection = (ref) => {
-    const offset = 180; // Adjust this value based on Navbar height
+    const offset = 200; // Adjust this value based on Navbar height
     if (ref.current) {
       const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
