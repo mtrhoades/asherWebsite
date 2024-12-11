@@ -4,13 +4,14 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
+import { FaPhoneAlt } from "react-icons/fa";
 
 const ResidentialModal = (props) => {
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="lg">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Using Grid in Modal
+          Residential Services
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="grid-example">
@@ -38,7 +39,7 @@ const ResidentialModal = (props) => {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
       </Modal.Footer>
     </Modal>
   );

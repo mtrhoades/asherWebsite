@@ -4,8 +4,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BsList, BsX } from 'react-icons/bs';
 import { FaPhoneAlt } from "react-icons/fa";
+import AboutModal from './Modals/AboutModal';
 
 const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
+    // modal state for about us
+    const [modalShow, setModalShow] = React.useState(false);
     
     const [menuOpen, setMenuOpen] = useState(false); // State to manage menu visibility
 
@@ -32,7 +35,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
       <Container className="nav-container">
         {/* Navbar Brand */}
         <Navbar.Brand onClick={handleScrollToTop} className="nav-header" style={{ cursor: 'pointer' }}>
-          <h1>Ashers Door Services LLC</h1>
+          <h1>Ashers Door Services</h1>
         </Navbar.Brand>
 
         {/* Hamburger Menu Icon */}
@@ -47,18 +50,18 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
         {/* Side Menu that slides in from the right */}
         <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
           <div className="side-menu-links">
+            <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
             <Nav.Link>Call Now!</Nav.Link>
-            <Nav.Link>About</Nav.Link>
           </div>
         </div>
 
         {/* Collapsible Navbar Links (Hidden on mobile) */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-menu h5">
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
@@ -66,7 +69,9 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <AboutModal show={modalShow} onHide={() => setModalShow(false)} />
     </Navbar>
+    
   )
 }
 

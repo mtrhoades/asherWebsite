@@ -45,9 +45,9 @@ function App() {
         <Contact />
       </div>
 
-      <div ref={reviewsRef}>
+      {/* <div ref={reviewsRef}>
         <Testimonials />
-      </div>
+      </div> */}
 
       <Footer />
 
