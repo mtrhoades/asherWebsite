@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BsList, BsX } from 'react-icons/bs';
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
     
@@ -49,6 +50,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
+            <Nav.Link>Call Now!</Nav.Link>
             <Nav.Link>About</Nav.Link>
           </div>
         </div>
@@ -60,6 +62,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
+            <Nav.Link href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

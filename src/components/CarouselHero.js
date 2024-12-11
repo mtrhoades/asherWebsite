@@ -1,5 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 // carousel images
 import drivewayGate3 from '../images/drivewayGate3.jpg';
 import drivewayGate1 from '../images/drivewayGate1.jpg';
@@ -63,6 +65,9 @@ const CarouselHero = () => {
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        <div className="card-overlay heroHeader">
+            <h1>Serving the island of Maui since 2015.</h1>
+        </div>
     </div>
   )
 }
