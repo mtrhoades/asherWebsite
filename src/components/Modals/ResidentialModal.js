@@ -26,17 +26,17 @@ const ResidentialModal = (props) => {
             </Col>
           </Row>
 
-          <Row>
-            <Col xs={6} md={4}>
-              <video source src={garageClosingVideo} type="video/webm" controls width="550"></video>
-              </Col>
-            <Col xs={6} md={4}>
-              <video source src={residentialGateVideo} type="video/webm" controls width="550"></video>
-            </Col>
-            <Col xs={6} md={4}>
-              <video source src={residentialGarageVideo} type="video/webm" controls width="550"></video>
-            </Col>
-          </Row>
+          <Col>
+            <Row xl={6} md={4}>
+              <video source src={garageClosingVideo} type="video/webm" controls width="350"></video>
+              </Row>
+            <Row xl={6} md={4}>
+              <video source src={residentialGateVideo} type="video/webm" controls width="350"></video>
+            </Row>
+            <Row xl={6} md={4}>
+              <video source src={residentialGarageVideo} type="video/webm" controls width="322.5"></video>
+            </Row>
+          </Col>
         </Container>
       </Modal.Body>
       <Modal.Footer>
