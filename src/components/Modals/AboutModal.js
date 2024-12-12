@@ -36,13 +36,13 @@ const AboutModal = (props) => {
             <img
               src={aboutUsGarageImg}
               class="w-100 shadow-1-strong rounded mb-4"
-              alt="Boat on Calm Water"
+              alt="garage work"
             />
 
             <img
               src={aboutUsGarageImg3}
               class="w-100 shadow-1-strong rounded mb-4"
-              alt="Wintry Mountain Landscape"
+              alt="more garage work"
             />
           </div>
 
@@ -50,13 +50,13 @@ const AboutModal = (props) => {
             <img
               src={aboutUsWorkingImg}
               class="w-100 shadow-1-strong rounded mb-4"
-              alt="Mountains in the Clouds"
+              alt="working on door"
             />
 
             <img
               src={aboutUsGarageImg2}
               class="w-100 shadow-1-strong rounded mb-4"
-              alt="Boat on Calm Water"
+              alt="beautiful garage door"
             />
           </div>
 
@@ -64,13 +64,13 @@ const AboutModal = (props) => {
             <img
               src={aboutUsGarageImg4}
               class="w-100 shadow-1-strong rounded mb-4"
-              alt="Waves at Sea"
+              alt="working garage door"
             />
 
             <img
               src={aboutUsGateImg}
               class="w-100 shadow-1-strong rounded mb-4"
-              alt="Yosemite National Park"
+              alt="gate work"
             />
           </div>
         </div>

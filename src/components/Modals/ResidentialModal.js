@@ -5,10 +5,14 @@ import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
+// videos
+import garageClosingVideo from '../../videos/garageClosing.mp4';
+import residentialGateVideo from '../../videos/residentialgate.mp4';
+import residentialGarageVideo from '../../videos/residentialgarage.mp4';
 
 const ResidentialModal = (props) => {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="lg">
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="xl">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Residential Services
@@ -17,23 +21,20 @@ const ResidentialModal = (props) => {
       <Modal.Body className="grid-example">
         <Container>
           <Row>
-            <Col xs={12} md={8}>
-              .col-xs-12 .col-md-8
-            </Col>
-            <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
+            <Col xl={12} md={8}>
+              Garage Doors, Remote programming, Gates, Side Doors, etc.
             </Col>
           </Row>
 
           <Row>
             <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
+              <video source src={garageClosingVideo} type="video/webm" controls width="550"></video>
+              </Col>
+            <Col xs={6} md={4}>
+              <video source src={residentialGateVideo} type="video/webm" controls width="550"></video>
             </Col>
             <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
-            </Col>
-            <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
+              <video source src={residentialGarageVideo} type="video/webm" controls width="550"></video>
             </Col>
           </Row>
         </Container>
