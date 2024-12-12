@@ -9,6 +9,10 @@ import { FaPhoneAlt } from "react-icons/fa";
 import garageClosingVideo from '../../videos/garageClosing.mp4';
 import residentialGateVideo from '../../videos/residentialgate.mp4';
 import residentialGarageVideo from '../../videos/residentialgarage.mp4';
+// images
+import residentialGarageImg from '../../images/residentialgarageImg.jpg';
+import residentialGarageImg2 from '../../images/residentialgarageImg2.jpg';
+import residentialGateImg from '../../images/residentialImg.jpg';
 
 const ResidentialModal = (props) => {
   return (
@@ -28,13 +32,16 @@ const ResidentialModal = (props) => {
 
           <Col>
             <Row xl={6} md={4}>
-              <video source src={garageClosingVideo} type="video/webm" controls width="350"></video>
+              {/* <video source src="{garageClosingVideo}" type="video/webm" controls width="350"></video> */}
+              <img src={residentialGarageImg}></img>
               </Row>
             <Row xl={6} md={4}>
-              <video source src={residentialGateVideo} type="video/webm" controls width="350"></video>
+              {/* <video source src={residentialGateVideo} type="video/webm" controls width="350"></video> */}
+              <img src={residentialGarageImg2}></img>
             </Row>
             <Row xl={6} md={4}>
-              <video source src={residentialGarageVideo} type="video/webm" controls width="322.5"></video>
+              {/* <video source src={residentialGarageVideo} type="video/webm" controls width="322.5"></video> */}
+              <img src={residentialGateImg}></img>
             </Row>
           </Col>
         </Container>
