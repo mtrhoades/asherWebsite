@@ -35,7 +35,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
       <Container className="nav-container">
         {/* Navbar Brand */}
         <Navbar.Brand onClick={handleScrollToTop} className="nav-header" style={{ cursor: 'pointer' }}>
-          <h1>Ashers Door Services</h1>
+          <h1>Asher's Door Services LLC</h1>
         </Navbar.Brand>
 
         {/* Hamburger Menu Icon */}

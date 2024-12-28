@@ -2,15 +2,14 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaPhoneAlt } from "react-icons/fa";
-import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea, MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 // images
-import aboutUsGarageImg from '../../images/aboutusGarageImg.jpg';
-import aboutUsGarageImg2 from '../../images/aboutusGarageImg2.jpg';
-import aboutUsGarageImg3 from '../../images/aboutusGarageImg3.jpeg';
-import aboutUsGateImg from '../../images/aboutUsGateImg.jpg';
-import aboutUsGarageImg4 from '../../images/aboutusgarageImg4.jpg';
-import aboutUsWorkingImg from '../../images/aboutusworkingImg.jpg';
+import image6959 from '../../images/Asher garage images/residential/servicesimages/IMG_6959.jpeg';
+import image7969 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7969.jpg';
+import image7968 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7968.jpg';
+import image9116 from '../../images/Asher garage images/residential/servicesimages/IMG_9116.jpg';
+import image9117 from '../../images/Asher garage images/residential/servicesimages/IMG_9117.jpg';
 
 const AboutModal = (props) => {
   return (
@@ -34,13 +33,13 @@ const AboutModal = (props) => {
         <div class="row">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
             <img
-              src={aboutUsGarageImg}
+              src={image6959}
               class="w-100 shadow-1-strong rounded mb-4"
               alt="garage work"
             />
 
             <img
-              src={aboutUsGarageImg3}
+              src={image6959}
               class="w-100 shadow-1-strong rounded mb-4"
               alt="more garage work"
             />
@@ -48,13 +47,13 @@ const AboutModal = (props) => {
 
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img
-              src={aboutUsWorkingImg}
+              src={image7969}
               class="w-100 shadow-1-strong rounded mb-4"
               alt="working on door"
             />
 
             <img
-              src={aboutUsGarageImg2}
+              src={image7968}
               class="w-100 shadow-1-strong rounded mb-4"
               alt="beautiful garage door"
             />
@@ -62,13 +61,13 @@ const AboutModal = (props) => {
 
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img
-              src={aboutUsGarageImg4}
+              src={image9116}
               class="w-100 shadow-1-strong rounded mb-4"
               alt="working garage door"
             />
 
             <img
-              src={aboutUsGateImg}
+              src={image9117}
               class="w-100 shadow-1-strong rounded mb-4"
               alt="gate work"
             />

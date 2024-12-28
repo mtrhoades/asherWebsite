@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 // services images
-import garageDoors1Front from '../images/garageDoors1Front.jpg';
-import commercialGate1 from '../images/commercialGate1.jpg';
-import drivewayGate6 from '../images/drivewayGate6.jpg';
-import keyPadSystems1 from '../images/keypadSystems1.jpg';
+import image0343 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_0343.jpg';
+import image0629 from '../images/Asher garage images/commercial/IMG_0629.jpg';
+import image9252 from '../images/Asher garage images/residential/servicesimages/IMG_9252.jpg';
 // modal imports
 import ResidentialModal from './Modals/ResidentialModal';
 import CommercialModal from './Modals/CommercialModal';
 import DrivewaygateModal from './Modals/DrivewaygateModal';
-import KeypadsystemsModal from './Modals/KeypadsystemsModal';
+// import KeypadsystemsModal from './Modals/KeypadsystemsModal';
 
 const Services = () => {
     const [residentialModalShow, setResidentialModalShow] = useState(false);
     const [commercialModalShow, setCommercialModalShow] = useState(false);
     const [drivewaygateModalShow, setDrivewaygateModalShow] = useState(false);
-    const [keypadsystemsModalShow, setKeypadsystemsModalShow] = useState(false);
+    // const [keypadsystemsModalShow, setKeypadsystemsModalShow] = useState(false);
   
   return (
     <div id="services">
@@ -25,7 +24,7 @@ const Services = () => {
         {/* Residential Card */}
         <Card className="card">
           <div className="card-image-container">
-            <Card.Img className="cardImage" variant="top" src={garageDoors1Front} />
+            <Card.Img className="cardImage" variant="top" src={image9252} />
             <div className="card-overlay">
               <Card.Title>Residential</Card.Title>
               <Button variant="primary" onClick={() => setResidentialModalShow(true)}>Learn More</Button>
@@ -39,7 +38,7 @@ const Services = () => {
         {/* Commercial Card */}
         <Card className="card">
           <div className="card-image-container">
-            <Card.Img className="cardImage" variant="top" src={commercialGate1} />
+            <Card.Img className="cardImage" variant="top" src={image0629} />
             <div className="card-overlay">
               <Card.Title>Commercial</Card.Title>
               <Button variant="primary" onClick={() => setCommercialModalShow(true)}>Learn More</Button>
@@ -53,7 +52,7 @@ const Services = () => {
         {/* Driveway gate Card */}
         <Card className="card">
           <div className="card-image-container">
-            <Card.Img className="cardImage" variant="top" src={drivewayGate6} />
+            <Card.Img className="cardImage" variant="top" src={image0343} />
             <div className="card-overlay">
               <Card.Title>Driveway Gates</Card.Title>
               <Button variant="primary" onClick={() => setDrivewaygateModalShow(true)}>Learn More</Button>
@@ -65,7 +64,7 @@ const Services = () => {
         <DrivewaygateModal show={drivewaygateModalShow} onHide={() => setDrivewaygateModalShow(false)} />
 
         {/* Keypad systems Card */}
-        <Card className="card">
+        {/* <Card className="card">
           <div className="card-image-container">
             <Card.Img className="cardImage" variant="top" src={keyPadSystems1} />
             <div className="card-overlay">
@@ -73,10 +72,10 @@ const Services = () => {
               <Button variant="primary" onClick={() => setKeypadsystemsModalShow(true)}>Learn More</Button>
             </div>
           </div>
-        </Card>
+        </Card> */}
 
         {/* Keypad systems Modal */}
-        <KeypadsystemsModal show={keypadsystemsModalShow} onHide={() => setKeypadsystemsModalShow(false)} />
+        {/* <KeypadsystemsModal show={keypadsystemsModalShow} onHide={() => setKeypadsystemsModalShow(false)} /> */}
 
       </div>
     </div>

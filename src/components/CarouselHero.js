@@ -1,10 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { MDBContainer, MDBCol, MDBRow, MDBBtn } from 'mdb-react-ui-kit';
-import drivewayGate3 from '../images/drivewayGate3.jpg';
-import drivewayGate1 from '../images/drivewayGate1.jpg';
-import garageDoor3Front from '../images/garageDoor3front.jpeg';
-import garageDoor2Front from '../images/garageDoor2Front.jpg';
+import img0136 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_0136.jpg';
+import image0140 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_0140.jpg';
+import image0293 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_0293.jpg';
+import image0343 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_0343.jpg';
 
 import AboutModal from './Modals/AboutModal';
 
@@ -14,7 +14,7 @@ const CarouselHero = () => {
 
   return (
     <div className="carouselContainer" id="hero">
-      <div className="hero-overlay">
+      {/* <div className="hero-overlay">
         <MDBContainer className="heroHeaderContainer">
           <MDBCol className="heroHeaderCol">
             <MDBRow>
@@ -22,7 +22,7 @@ const CarouselHero = () => {
             </MDBRow>
             <MDBRow>
               <h2 className="heroHeader">
-               Garage Door Installation, Maintenance, Repairs. Serving Maui since 2015.
+               Garage Door, Commercial Roll-up Doors & Hollow Metal Doors, Automatic Driveway Gates, Supply, Install & Repair.
               </h2>
             </MDBRow>
             <MDBRow>
@@ -36,20 +36,20 @@ const CarouselHero = () => {
             <MDBBtn className="heroBtn" onClick={() => setModalShow(true)}>Learn More</MDBBtn>
           </MDBCol>
         </MDBContainer>
-      </div>
+      </div> */}
       <AboutModal show={modalShow} onHide={() => setModalShow(false)} />
       <Carousel data-bs-theme="dark">
         <Carousel.Item>
-          <img className="d-block w-100" src={drivewayGate3} alt="First slide" />
+          <img className="d-block w-100" src={img0136} alt="First slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={garageDoor3Front} alt="Second slide" />
+          <img className="d-block w-100" src={image0140} alt="Second slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={drivewayGate1} alt="Third slide" />
+          <img className="d-block w-100" src={image0293} alt="Third slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={garageDoor2Front} alt="Fourth slide" />
+          <img className="d-block w-100" src={image0343} alt="Fourth slide" />
         </Carousel.Item>
       </Carousel>
     </div>

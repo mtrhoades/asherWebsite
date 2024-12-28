@@ -10,9 +10,10 @@ import garageClosingVideo from '../../videos/garageClosing.mp4';
 import residentialGateVideo from '../../videos/residentialgate.mp4';
 import residentialGarageVideo from '../../videos/residentialgarage.mp4';
 // images
-import residentialGarageImg from '../../images/residentialgarageImg.jpg';
-import residentialGarageImg2 from '../../images/residentialgarageImg2.jpg';
-import residentialGateImg from '../../images/residentialImg.jpg';
+import image0131 from '../../images/Asher garage images/residential/servicesimages/IMG_0131.jpg';
+import image6915 from '../../images/Asher garage images/residential/servicesimages/IMG_6915.jpeg';
+import image6959 from '../../images/Asher garage images/residential/servicesimages/IMG_6959.jpeg';
+import image6960 from '../../images/Asher garage images/residential/servicesimages/IMG_6960.jpeg';
 
 const ResidentialModal = (props) => {
   return (
@@ -32,16 +33,16 @@ const ResidentialModal = (props) => {
 
           <Col>
             <Row xl={6} md={4}>
-              {/* <video source src="{garageClosingVideo}" type="video/webm" controls width="350"></video> */}
-              <img src={residentialGarageImg}></img>
+              <video source src="{garageClosingVideo}" type="video/webm" controls width="350"></video>
+              {/* <img src={residentialGarageImg}></img> */}
               </Row>
             <Row xl={6} md={4}>
-              {/* <video source src={residentialGateVideo} type="video/webm" controls width="350"></video> */}
-              <img src={residentialGarageImg2}></img>
+              <video source src={residentialGateVideo} type="video/webm" controls width="350"></video>
+              {/* <img src={residentialGarageImg2}></img> */}
             </Row>
             <Row xl={6} md={4}>
-              {/* <video source src={residentialGarageVideo} type="video/webm" controls width="322.5"></video> */}
-              <img src={residentialGateImg}></img>
+              <video source src={residentialGarageVideo} type="video/webm" controls width="322.5"></video>
+              {/* <img src={residentialGateImg}></img> */}
             </Row>
           </Col>
         </Container>
