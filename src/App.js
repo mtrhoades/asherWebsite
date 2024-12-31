@@ -4,14 +4,11 @@ import Navigation from './components/Navigation';
 import CarouselHero from './components/CarouselHero';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
 function App() {
-
   const servicesRef = useRef(null);
   const contactRef = useRef(null);
-  const reviewsRef = useRef(null);
 
   const handleScrollToSection = (ref) => {
     const offset = 200; // Adjust this value based on Navbar height
@@ -28,29 +25,18 @@ function App() {
 
   return (
     <div className="App">
-
       <Navigation 
         onServicesClick={() => handleScrollToSection(servicesRef)}
         onContactClick={() => handleScrollToSection(contactRef)}
-        onReviewsClick={() => handleScrollToSection(reviewsRef)}
       />
-
       <CarouselHero />
-
       <div ref={servicesRef}>
         <Services />
       </div>
-
       <div ref={contactRef}>
         <Contact />
       </div>
-
-      {/* <div ref={reviewsRef}>
-        <Testimonials />
-      </div> */}
-
       <Footer />
-
     </div>
   );
 }
