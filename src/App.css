@@ -97,12 +97,8 @@
 
 .hero-overlay {
   position: absolute;
-  bottom: 0; /* Sticks to the bottom of the carousel */
-  left: 0;
+  bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
   z-index: 2;
   pointer-events: none; /* Allow carousel interactions */
@@ -110,131 +106,9 @@
 
 .hero-content {
   display: flex;
-  /* flex-direction: column; */
-  justify-content: flex-start; /* Spread items across the row */
   align-items: center;
-  width: 100%; /* Slightly reduce width for spacing on large screens */
-  max-width: 1200px; /* Limit the width for large screens */
-  margin: 0 auto; /* Center the content */
-  padding: 20px;
+  pointer-events: auto;
   text-align: center;
-  pointer-events: auto; /* Enable interaction for the content */
-  gap: 20px; /* Add spacing between elements */
-}
-
-.hero-content h4 {
-  margin: 0;
-  font-size: 1.5rem; /* Larger font for larger screens */
-  font-weight: bold;
-  color: black;
-}
-
-.hero-content h2 {
-  margin: 0;
-  font-size: 1.8rem; /* Larger header font */
-  font-weight: bold;
-  color: black;
-  text-shadow: 1px 1px 2px white;
-  white-space: nowrap; /* Prevent wrapping */
-}
-
-.heroHeaderCol {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem; /* Adds space between rows */
-}
-
-.heroBtnCol {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center button vertically */
-  align-items: center; /* Center button horizontally */
-  gap: 1rem; /* Space around the button */
-}
-
-.heroHeader {
-  color: black;
-  text-shadow: 2px 2px 4px white;
-  font-size: 2.5rem; /* Larger font for headers */
-}
-
-.heroSecondaryText {
-  font-size: 1.25rem; /* Adjust for secondary text */
-}
-
-.heroBtn {
-  text-align: center;
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.hero-content .heroBtn {
-  font-size: 1.2rem;
-  padding: 12px 24px;
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .heroHeaderContainer {
-    max-width: 95%; /* More compact width */
-    text-align: center; /* Center-align text for smaller screens */
-    flex-direction: column; /* Stack columns vertically */
-    height: auto; /* Adjust height dynamically */
-  }
-
-  .hero-content {
-    flex-direction: column; /* Stack elements vertically */
-    gap: 1rem; /* Add spacing between elements */
-  }
-
-  .hero-content h4, .hero-content h2 {
-    font-size: 1.2rem; /* Reduce font size for smaller screens */
-    white-space: normal; /* Allow wrapping */
-  }
-
-  .heroBtn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .heroHeaderCol {
-    align-items: center; /* Center-align content */
-    text-align: center;
-  }
-
-  .heroBtnCol {
-    align-items: center; /* Center-align the button */
-    justify-content: center;
-  }
-
-  .heroHeader {
-    font-size: 1.8rem; /* Reduce font size for headers */
-  }
-
-  .heroSecondaryText {
-    font-size: 1rem; /* Reduce font size for smaller screens */
-  }
-}
-@media (max-width: 495px) {
-  .heroSecondaryTextP {
-    display: none;
-  }
-}
-@media (max-width: 328px) {
-  .heroSecondaryText {
-    display: none;
-  }
 }
 
 .card {
@@ -250,6 +124,10 @@
   position: relative; /* Ensure the overlay is positioned within this container */
 }
 
+.cardImage {
+  opacity: 0.8;
+}
+
 .card-overlay {
   position: absolute;
   top: 50%;
@@ -257,6 +135,7 @@
   transform: translate(-50%, -50%); /* Centers the content */
   text-align: center;
   color: white; /* Make the text and button stand out */
+  text-shadow: black 1px 0 15px;
 }
 
 .card-overlay .btn {
@@ -266,7 +145,7 @@
 /* Styles for the grid layout (unchanged) */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
   align-items: center;
@@ -297,4 +176,57 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+
+/* about modal */
+.galleryGrid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.galleryGrid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.galleryGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.galleryGrid1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.galleryGrid2 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.galleryGrid3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.residentialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.residentialGrid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
 }
