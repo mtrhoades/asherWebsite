@@ -218,13 +218,13 @@
   border-radius: 5px;
 }
 
-.residentialGrid {
+.servicesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-.residentialGrid img {
+.servicesGrid img {
   width: 100%;
   height: auto;
   object-fit: cover;
