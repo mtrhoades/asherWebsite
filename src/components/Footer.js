@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
         <MDBFooter className='text-center text-white' style={{ backgroundColor: '#f1f1f1' }}>
-            <MDBContainer className='pt-4'>
+            {/* <MDBContainer className='pt-4'>
                 <section className='mb-4'>
                     <MDBBtn
                         rippleColor="dark"
@@ -19,18 +19,6 @@ const Footer = () => {
                         <MDBIcon fab className='fab fa-facebook-f' />
                     </MDBBtn>
 
-                    {/* <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                        >
-                        <MDBIcon fab className='fa-twitter' />
-                    </MDBBtn>
- */}
                     <MDBBtn
                         rippleColor="dark"
                         color='link'
@@ -55,27 +43,13 @@ const Footer = () => {
                         <MDBIcon fab className='fa-instagram' />
                     </MDBBtn>
 
-                    {/* <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                        >
-                        <MDBIcon fab className='fa-linkedin' />
-                    </MDBBtn> */}
-
                 </section>
-            </MDBContainer>
+            </MDBContainer> */}
 
             <div className='text-center text-dark p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                © 2024 Copyright: Asher''s Door Services LLC
+                © 2025 Copyright: Asher's Door Services LLC
             </div>
-
         </MDBFooter>
-
     </div>
   )
 }

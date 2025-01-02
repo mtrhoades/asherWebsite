@@ -5,6 +5,8 @@ import img0136 from '../images/Asher garage images/drivewaygates/carouselimages/
 import image9253 from '../images/Asher garage images/residential/carouselimages/IMG_9253.jpg';
 import image9120 from '../images/Asher garage images/residential/carouselimages/IMG_9120.jpg';
 import image0343 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_0343.jpg';
+import image9793 from '../images/Asher garage images/drivewaygates/carouselimages/IMG_9793.jpg';
+import image0629 from '../images/Asher garage images/commercial/IMG_0629.jpg';
 
 import AboutModal from './Modals/AboutModal';
 
@@ -26,10 +28,15 @@ const CarouselHero = () => {
         <Carousel.Item>
           <img className="d-block w-100" src={image9120} alt="Fourth slide" />
         </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={image9793} alt="Fifth slide" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={image0629} alt="Sixth slide" />
+        </Carousel.Item>
       </Carousel>
       <div className="hero-overlay">
         <MDBContainer className="hero-content">
-          {/* <h4>Ashers Door Services LLC</h4> */}
           <h2>Supplies, Installations, & Repairs</h2>
           <h2>Residential & Commercial Services</h2>
           <h2>Automatic Driveway Gates.</h2>

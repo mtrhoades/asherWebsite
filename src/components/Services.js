@@ -16,7 +16,7 @@ const Services = () => {
     const [drivewaygateModalShow, setDrivewaygateModalShow] = useState(false);
   
   return (
-    <div id="services">
+    <div style={{marginTop: '50px'}} id="services">
       <h1>Services</h1>
       <div className="cards-container">
         {/* Residential Card */}

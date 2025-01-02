@@ -31,10 +31,10 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
         };
 
   return (
-    <Navbar sticky="top" expand="md" className="navBar" bg="light" data-bs-theme="light">
+    <Navbar sticky="top" expand="md" className="navBar" bg="light">
       <Container className="nav-container">
         {/* Navbar Brand */}
-        <Navbar.Brand onClick={handleScrollToTop} className="nav-header" style={{ cursor: 'pointer' }}>
+        <Navbar.Brand onClick={handleScrollToTop} className="nav-header" style={{ cursor: 'pointer', color: '#386BC0' }}>
           <h1>Asher's Door Services LLC</h1>
         </Navbar.Brand>
 
@@ -54,7 +54,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
-            <Nav.Link href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
+            <Nav.Link style={{color: '#386BC0'}} href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
           </div>
         </div>
 
@@ -65,7 +65,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
-            <Nav.Link href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
+            <Nav.Link style={{color: '#386BC0'}} href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

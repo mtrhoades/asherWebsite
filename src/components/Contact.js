@@ -3,7 +3,7 @@ import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea, MDBFooter, MDBContainer, MD
 
 const Contact = () => {
   return (
-    <div id="contact">
+    <div style={{marginTop: '50px'}} id="contact">
         <h1>Contact Us</h1>
         <div className="contact-container">
             <MDBContainer>
