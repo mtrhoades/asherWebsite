@@ -31,19 +31,31 @@ const CommercialModal = (props) => {
           <Modal.Body className="grid-example">
             <Container>
               {/* intro text here */}
-              <p>Asher's commercial services include: supply, install, & repair of commercial gates, and/or hollow metal roll-up doors. We use <a target="_blank" href="https://www.janusintl.com/rolling-steel-doors">Janus </a>brand commercial roll-up doors and we use <a target="_blank" href="https://www.liftmaster.com/">Liftmaster </a>brand openers for the commercial gates. Each hollow metal roll-up door can be custom fitted to your needs. Each row of images shown below showcase the front and back of the same door installed. There are also before and after images of a commercial roll-up door being repaired.</p>
+              <p>At Asher's Door Services LLC, we provide comprehensive solutions for commercial properties, specializing in the supply, installation, and repair of high-quality doors and gates. Our offerings include durable <a target="_blank" href="https://www.janusintl.com/rolling-steel-doors">Janus</a> brand metal roll-up doors, reliable <a target="_blank" href="https://www.liftmaster.com/">Liftmaster</a> operators, and hollow-metal doors designed for heavy-duty use. We also excel in crafting custom-made gates that combine functionality and style to meet the unique needs of your business. Whether you're outfitting a warehouse, retail space, or industrial facility, our family-run business brings over 20 years of expertise to every project, ensuring your doors and gates are built to last and operate seamlessly.</p>
 
               {/* row 1 front/back images*/}
               <div className="servicesGrid">
-                <img src={image0629}></img>
-                <img src={image0630}></img>
+                <div>
+                  <img src={image0629}></img>
+                  <p>Front Gate</p>                  
+                </div>
+                <div>
+                  <img src={image0630}></img>
+                  <p>Back Gate</p>
+                </div>
               </div>
                 {/* video */}
 
               {/* row 2 front/back images*/}
               <div className="servicesGrid">
-                <img src={image9580}></img>
-                <img src={image9578}></img>
+                <div>
+                  <img src={image9580}></img>
+                  <p>Front Roll-up Door</p>
+                </div>
+                <div>
+                  <img src={image9578}></img>
+                  <p>Back Roll-up Door</p>
+                </div>
               </div>
                 {/* video */}
 

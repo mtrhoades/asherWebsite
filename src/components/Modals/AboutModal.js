@@ -41,7 +41,11 @@ const AboutModal = (props) => {
       <Modal.Body>
         <h4>About Us</h4>
         <p>
-          Asher has been in the garage door & driveway gate service industry for over 20 years. He has worked with big companies on the commercial side, and many different residential homes in all sorts of developments here on the island of Maui. Asher has lots of experience in this field and it shows through all the work he has done in the past.
+          At Asher's Door Services LLC, we bring over 20 years of experience and expertise in the garage door and driveway gate industry to homes and businesses across the beautiful island of Maui. Asher has worked with some of the largest companies on the commercial side and countless residential properties in diverse neighborhoods, earning a reputation for excellence and craftsmanship.
+          <br></br>
+          Our family-run business is dedicated to providing customized solutions for every client. From premium garage doors by Clopay to durable Janus roll-up doors and bespoke automatic driveway gates, we ensure every project is tailored to meet your unique needs. Whether it’s designing a one-of-a-kind gate using advanced CNC technology, installing high-quality Liftmaster operators, or repairing and maintaining your existing systems, our commitment to quality and customer satisfaction shines through in every job we do.
+          <br></br>
+          At Asher's Door Services LLC, we don’t just provide products—we create lasting solutions that combine functionality, security, and style, always backed by a personal touch that comes from working with a local, family-oriented business.
         </p>
 
         <h4>Residential Services</h4>
@@ -60,20 +64,19 @@ const AboutModal = (props) => {
             <img src={image9118}></img>
           </div>
 
-          <div>
+          {/* <div>
             <img src={image9117}></img>
-          </div>
+          </div> */}
+
+          {/* <div>
+            <h4>Garage door installation with overlapping doors.</h4>
+            <p>This particular installation was done with both garage doors overlapping each other on the ceiling, with just enough space to move past each other to work properly. This shows one of Asher's ingenuius ways of solving particular problems that may occur with your property.
+            </p>
+          </div> */}
 
           <div>
             <img src={image9116}></img>
           </div>
-
-          <div>
-            <h4>Garage door installation with overlapping doors.</h4>
-            <p>This particular installation was done with both garage doors overlapping each other on the ceiling, with just enough space to move past each other to work properly. This shows one of Asher's ingenuius ways of solving particular problems that may occur with your property.
-            </p>
-          </div>
-
         </div>
         <h4>Commercial Services</h4>
         {/* <!-- Gallery 2--> */}
@@ -90,18 +93,18 @@ const AboutModal = (props) => {
             <img src={image0630}></img>
           </div>
 
-          <div>
+          {/* <div>
             <h4>Hollow Metal Roll-up Doors & Commercial Gates</h4>
             <p>Asher is very comfortable working with any commercial business and is particularly good at installing hollow metal roll-up doors as seen in this gallery, as well as commercial drive-in/out gates. Any type of customization can be done.</p>
-          </div>
+          </div> */}
 
           <div>
             <img src={image0629}></img>
           </div>
 
-          <div>
+          {/* <div>
             <img src={image0467}></img>
-          </div>
+          </div> */}
 
         </div>
         <h4>Driveway Gates</h4>
@@ -119,19 +122,18 @@ const AboutModal = (props) => {
             <img src={image7967}></img>
           </div>
 
-          <div>
+          {/* <div>
             <img src={image9072}></img>
-          </div>
+          </div> */}
+
+          {/* <div>
+            <h4>Customized Driveway Gates</h4>
+            <p>Asher services include building customized driveway gates. As you can see in this gallery, this 28ft. long gate was custom made with a CNC machine. There are options to use solar or A/C powered devices for the operators, and of course key pad systems.</p>
+          </div> */}
 
           <div>
             <img src={image7945}></img>
           </div>
-
-          <div>
-            <h4>Customized Driveway Gates</h4>
-            <p>Asher services include building customized driveway gates. As you can see in this gallery, this long gate was custom made with a CNC machine. There are options to use solar or battery powered devices, and of course key pad systems.</p>
-          </div>
-
         </div>
         <MDBContainer>
         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>

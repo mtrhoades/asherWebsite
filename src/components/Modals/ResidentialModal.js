@@ -30,26 +30,44 @@ const ResidentialModal = (props) => {
       <Modal.Body className="grid-example">
         <Container>
           {/* intro text here */}
-          <p>Asher's residential services include: supply, install, & repair. We use <a target="_blank" href="https://www.clopaydoor.com/?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQiAj9m7BhD1ARIsANsIIvCj-0NDWRKvRJ_k5tv6I78l_AxMo_WaDXta1WkRVRc8x3UUcMgvxfoaAhEIEALw_wcB">Clopay </a>brand garage doors and we use <a target="_blank" href="https://www.liftmaster.com/">Liftmaster </a>brand openers. Each door can be custom fitted to your needs. Each row of images shown below showcase the front and back of the same door installed.</p>
+          <p>At Asher's Door Services LLC, we specialize in providing top-quality residential garage door solutions tailored to meet your unique needs. With over 20 years of experience, our family-run business proudly supplies premium garage doors from trusted brands like <a target="_blank" href="https://www.clopaydoor.com/?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQiAj9m7BhD1ARIsANsIIvCj-0NDWRKvRJ_k5tv6I78l_AxMo_WaDXta1WkRVRc8x3UUcMgvxfoaAhEIEALw_wcB">Clopay</a> and reliable openers from <a target="_blank" href="https://www.liftmaster.com/">Liftmaster.</a> From installations to repairs, our team is dedicated to ensuring your garage door operates flawlessly. We also offer custom programming for remotes and personalized designs to perfectly complement your home's style. Whether you're looking for a sleek, modern look or a timeless design, we deliver exceptional craftsmanship and service you can trust.</p>
 
           {/* row 1 front/back images*/}
           <div className="servicesGrid">
-            <img src={image6915}></img>
-            <img src={image6917}></img>
+            <div>
+              <img src={image6915}></img>
+              <p>Front</p>
+            </div>
+            <div>
+              <img src={image6917}></img>
+              <p>Back</p>
+            </div>
           </div>
             {/* video */}
 
           {/* row 2 front/back images*/}
           <div className="servicesGrid">
-            <img src={image0440}></img>
-            <img src={image0439}></img>
+            <div>
+              <img src={image0440}></img>
+              <p>Front</p>
+            </div>
+            <div>
+              <img src={image0439}></img>
+              <p>Back</p>
+            </div>
           </div>
             {/* video */}
 
           {/* row 3 front/back images*/}
           <div className="servicesGrid">
-            <img src={image9253}></img>
-            <img src={image9252}></img>
+            <div>
+              <img src={image9253}></img>
+              <p>Front</p>
+            </div>
+            <div>
+              <img src={image9252}></img>
+              <p>Back</p>
+            </div>
           </div>
             {/* video */}
 

@@ -1,12 +1,17 @@
 /* Container and Navbar Styling */
+h1 {
+  text-align: center;
+  text-shadow: 2px 1px 2px grey, 0 0 1em white, 0 0 0.2em white;
+}
+
 .nav-container {
   display: flex;
   flex-direction: column;
 }
 
-.nav-header {
+/* .nav-header {
   text-shadow: 2px 1px 2px grey, 0 0 1em white, 0 0 0.2em white;
-}
+} */
 
 .phoneLink {
   font-size: 1.25rem;
@@ -100,18 +105,39 @@
   /* position: absolute; */
   bottom: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  background-color: rgba(171, 183, 201, 0.5); /* Semi-transparent background */
   z-index: 2;
   pointer-events: none; /* Allow carousel interactions */
 }
 
 .hero-content {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 25px;
   padding-bottom: 32.5px;
   pointer-events: auto;
   text-align: center;
+}
+
+.heroContentHeaders {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1316px) {
+  .heroContentHeaders {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 991px) {
+  .breakBar {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

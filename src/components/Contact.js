@@ -4,7 +4,7 @@ import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea, MDBFooter, MDBContainer, MD
 const Contact = () => {
   return (
     <div style={{marginTop: '50px'}} id="contact">
-        <h1>Contact Us</h1>
+        <h1 style={{color: '#386BC0'}}>Contact Us</h1>
         <div className="contact-container">
             <MDBContainer>
                 <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>

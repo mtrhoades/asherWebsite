@@ -60,7 +60,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
 
         {/* Collapsible Navbar Links (Hidden on mobile) */}
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="nav-menu h5">
+          <Nav className="nav-menu h4">
             <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
