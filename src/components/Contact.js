@@ -28,20 +28,22 @@ const Contact = () => {
                 </MDBCol>
             </MDBContainer>
 
-            <form id='form' className='text-center' style={{ width: '100%', maxWidth: '400px' }}>
-                <MDBInput label='Name' v-model='name' wrapperClass='mb-4' />
+            <form action="https://formsubmit.co/0808b71977531437c237c69e8197054d" method="POST" id='form' className='text-center' style={{ width: '100%', maxWidth: '400px' }}>
+                <MDBInput label='Name' name="name" v-model='name' wrapperClass='mb-4' />
 
-                <MDBInput type='email' label='Email address' v-model='email' wrapperClass='mb-4' />
+                <MDBInput type='email' name="email" label='Email address' v-model='email' wrapperClass='mb-4' />
 
-                <MDBInput label='Subject' v-model='subject' wrapperClass='mb-4' />
+                <MDBInput label='Subject' name="subject" v-model='subject' wrapperClass='mb-4' />
 
-                <MDBTextArea wrapperClass='mb-4' label='Message' />
+                <MDBTextArea wrapperClass='mb-4' name="message" label='Message' />
 
-                <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' />
+                {/* <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' /> */}
+                {/* ^ will this work alone? might need to remove, unless logic for it is easy? */}
 
                 <MDBBtn color='primary' block className='my-4'>
                     Send
                 </MDBBtn>
+                {/* ^ have an alert to show that the email message send was successful */}
             </form>
         </div>
     </div>
