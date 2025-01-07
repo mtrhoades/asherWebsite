@@ -40,7 +40,7 @@ const Contact = () => {
                 {/* <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' /> */}
                 {/* ^ will this work alone? might need to remove, unless logic for it is easy? */}
 
-                <MDBBtn color='primary' block className='my-4'>
+                <MDBBtn type="submit" color='primary' block className='my-4'>
                     Send
                 </MDBBtn>
                 {/* ^ have an alert to show that the email message send was successful */}

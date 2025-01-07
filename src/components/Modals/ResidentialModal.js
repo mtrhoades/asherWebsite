@@ -6,6 +6,10 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
 
+// lightbox
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+
 // videos
 
 // images
@@ -20,6 +24,25 @@ import image9253 from '../../images/Asher garage images/residential/carouselimag
 import image9252 from '../../images/Asher garage images/residential/servicesimages/IMG_9252.jpg';
 
 const ResidentialModal = (props) => {
+
+  // lightbox
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    { src: image6915 },
+    { src: image6917 },
+    { src: image0440 },
+    { src: image0439 },
+    { src: image9253 },
+    { src: image9252 },
+  ];
+
+  const handleImageClick = (index) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="xl">
       <Modal.Header closeButton>
@@ -35,47 +58,52 @@ const ResidentialModal = (props) => {
           {/* row 1 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img src={image6915}></img>
+              <img onClick={() => handleImageClick(0)} src={image6915}></img>
               <p>Front</p>
             </div>
             <div>
-              <img src={image6917}></img>
+              <img onClick={() => handleImageClick(1)} src={image6917}></img>
               <p>Back</p>
             </div>
           </div>
-            {/* video */}
 
           {/* row 2 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img src={image0440}></img>
+              <img onClick={() => handleImageClick(2)} src={image0440}></img>
               <p>Front</p>
             </div>
             <div>
-              <img src={image0439}></img>
+              <img onClick={() => handleImageClick(3)} src={image0439}></img>
               <p>Back</p>
             </div>
           </div>
-            {/* video */}
 
           {/* row 3 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img src={image9253}></img>
+              <img onClick={() => handleImageClick(4)} src={image9253}></img>
               <p>Front</p>
             </div>
             <div>
-              <img src={image9252}></img>
+              <img onClick={() => handleImageClick(5)} src={image9252}></img>
               <p>Back</p>
             </div>
           </div>
-            {/* video */}
 
         </Container>
       </Modal.Body>
       <Modal.Footer>
         <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
       </Modal.Footer>
+       {/* Lightbox */}
+       <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={images}
+        index={currentIndex}
+        setIndex={setCurrentIndex}
+      />
     </Modal>
   );
 };
