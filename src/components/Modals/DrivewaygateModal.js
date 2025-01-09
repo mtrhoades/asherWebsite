@@ -6,6 +6,10 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
 
+// lightbox
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+
 // images
 // row 1
 import image0343 from '../../images/Asher garage images/drivewaygates/carouselimages/IMG_0343.jpg';
@@ -24,6 +28,29 @@ import image7679 from '../../images/Asher garage images/drivewaygates/servicesim
 import image9072 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_9072.jpg';
 
 const DrivewaygateModal = (props) => {
+
+    // lightbox
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    const images = [
+      { src: image0343, description: "Customized Front Gate (Knot Wood)" },
+      { src: image0293, description: "Customized Back Gate (Knot Wood)" },
+      { src: image9793, description: "Customized Front Gate" },
+      { src: image9794, description: "Customized Back Gate" },
+      { src: image7680, description: "Customized Front Gate in Hana" },
+      { src: image7677, description: "Customized Gate in Hana with LiftMaster Operator"},
+      { src: image0136, description: "Customized Front Gate (green)" },
+      { src: image0140, description: "Customized Side Door to go with Gate (green)"},
+      { src: image7679, description: "Solar Powered Operator"},
+      { src: image9072, description: "State of the art Key Pad System"}
+    ];
+  
+    const handleImageClick = (index) => {
+      setCurrentIndex(index);
+      setLightboxOpen(true);
+    };
+  
     return (
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="xl">
           <Modal.Header closeButton>
@@ -39,54 +66,60 @@ const DrivewaygateModal = (props) => {
               {/* row 1 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={image0343}></img>
-                  <p>Front Gate</p>
+                  <img onClick={() => handleImageClick(0)} src={image0343}></img>
+                  <p>Customized Front Gate (Knot Wood)</p>
                 </div>
                 <div>
-                  <img src={image0293}></img>
-                  <p>Back Gate</p>
+                  <img onClick={() => handleImageClick(1)} src={image0293}></img>
+                  <p>Customized Back Gate (Knot Wood)</p>
                 </div>
               </div>
 
               {/* row 2 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={image9793}></img>
-                  <p>Front Gate</p>
+                  <img onClick={() => handleImageClick(2)} src={image9793}></img>
+                  <p>Customized Front Gate</p>
                 </div>
                 <div>
-                  <img src={image9794}></img>
-                  <p>Back Gate</p>
+                  <img onClick={() => handleImageClick(3)} src={image9794}></img>
+                  <p>Customized Back Gate</p>
                 </div>
               </div>
 
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={image7680}></img>
-                  <p>Front Gate in Hana (paired with image of Liftmaster operator below)</p>
+                  <img onClick={() => handleImageClick(4)} src={image7680}></img>
+                  <p>Customized Front Gate in Hana</p>
                 </div>
                 <div>
-                  <img src={image0136}></img>
-                  <p>Front Gate (pairs with custom-built side door below)</p>
+                  <img onClick={() => handleImageClick(6)} src={image0136}></img>
+                  <p>Customized Front Gate (green)</p>
                 </div>
               </div>
 
               {/* row 4 */}
               <div className="servicesGrid">
-                <img src={image7677}></img>
-                <img src={image0140}></img>
+                <div>
+                  <img onClick={() => handleImageClick(5)} src={image7677}></img>
+                  <p>Customized Gate in Hana with LiftMaster Operator</p>
+                </div>
+                <div>
+                  <img onClick={() => handleImageClick(7)} src={image0140}></img>
+                  <p>Customized Side Door to go with Gate (green)</p>
+                </div>
               </div>
 
               {/* row 5 */}
               <div className="servicesGrid">
                 <div>
-                  <img src={image7679}></img>
-                  <p>Solar powered operator</p>
+                  <img onClick={() => handleImageClick(8)} src={image7679}></img>
+                  <p>Solar Powered Operator</p>
                 </div>
                 <div>
-                  <img src={image9072}></img>
-                  <p>Newly installed state of the art keypad system</p>
+                  <img onClick={() => handleImageClick(9)} src={image9072}></img>
+                  <p>State of the art Key Pad System</p>
                 </div>
               </div>
 
@@ -95,6 +128,30 @@ const DrivewaygateModal = (props) => {
           <Modal.Footer>
             <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
           </Modal.Footer>
+                    {/* Lightbox */}
+                    <Lightbox
+            open={lightboxOpen}
+            close={() => setLightboxOpen(false)}
+            slides={images}
+            index={currentIndex}
+            setIndex={setCurrentIndex}
+            render={{
+              slide: ({ slide }) => (
+                <div style={{ position: "relative", textAlign: "center", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={slide.src} alt={slide.description} style={{ maxWidth: "66%"}} />
+                  <p style={{
+                    color: "white",
+                    fontSize: "1.2rem",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
+                    padding: "5px",
+                    borderRadius: "5px",
+                  }}>
+                    {slide.description}
+                  </p>
+                </div>
+              ),
+            }}
+          />
         </Modal>
       );
     }

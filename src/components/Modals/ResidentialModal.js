@@ -30,12 +30,12 @@ const ResidentialModal = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    { src: image6915 },
-    { src: image6917 },
-    { src: image0440 },
-    { src: image0439 },
-    { src: image9253 },
-    { src: image9252 },
+    { src: image6915, description: 'Front Garage Door (brown), newly installed' },
+    { src: image6917, description: 'Back Garage Door, newly installed' },
+    { src: image0440, description: 'Front Garage Door (blue), newly installed' },
+    { src: image0439, description: 'Back Garage Door, newly installed' },
+    { src: image9253, description: 'Front Garage Door (cedar), newly installed' },
+    { src: image9252, description: 'Back Garage Door, newly installed' },
   ];
 
   const handleImageClick = (index) => {
@@ -59,11 +59,11 @@ const ResidentialModal = (props) => {
           <div className="servicesGrid">
             <div>
               <img onClick={() => handleImageClick(0)} src={image6915}></img>
-              <p>Front</p>
+              <p>Front Garage Door (brown), newly installed</p>
             </div>
             <div>
               <img onClick={() => handleImageClick(1)} src={image6917}></img>
-              <p>Back</p>
+              <p>Back Garage Door, newly installed</p>
             </div>
           </div>
 
@@ -71,11 +71,11 @@ const ResidentialModal = (props) => {
           <div className="servicesGrid">
             <div>
               <img onClick={() => handleImageClick(2)} src={image0440}></img>
-              <p>Front</p>
+              <p>Front Garage Door (blue), newly installed</p>
             </div>
             <div>
               <img onClick={() => handleImageClick(3)} src={image0439}></img>
-              <p>Back</p>
+              <p>Back Garage Door, newly installed</p>
             </div>
           </div>
 
@@ -83,11 +83,11 @@ const ResidentialModal = (props) => {
           <div className="servicesGrid">
             <div>
               <img onClick={() => handleImageClick(4)} src={image9253}></img>
-              <p>Front</p>
+              <p>Front Garage Door (cedar), newly installed</p>
             </div>
             <div>
               <img onClick={() => handleImageClick(5)} src={image9252}></img>
-              <p>Back</p>
+              <p>Back Garage Door, newly installed</p>
             </div>
           </div>
 
@@ -103,6 +103,19 @@ const ResidentialModal = (props) => {
         slides={images}
         index={currentIndex}
         setIndex={setCurrentIndex}
+        render={{
+          slide: ({ slide }) => (
+            <div style={{ textAlign: "center" }}>
+              <img src={slide.src} alt={slide.description} style={{ maxWidth: "66%"}} />
+              <p style={{
+                color: "white",
+                fontSize: "1.2rem",
+              }}>
+                {slide.description}
+              </p>
+            </div>
+          ),
+        }}
       />
     </Modal>
   );

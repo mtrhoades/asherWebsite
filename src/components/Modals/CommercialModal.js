@@ -6,6 +6,10 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
 
+// lightbox
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+
 // images
 // row 1
 import image0629 from '../../images/Asher garage images/commercial/IMG_0629.jpg';
@@ -21,6 +25,27 @@ import imagebrokendoor2 from '../../images/Asher garage images/commercial/broken
 import image0249 from '../../images/Asher garage images/commercial/IMG_0249.jpg';
 
 const CommercialModal = (props) => {
+
+    // lightbox
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    const images = [
+      { src: image0629, description: "Front Commercial Gate" },
+      { src: image0630, description: "Back Commercial Gate" },
+      { src: image9580, description: "Front Hollow Metal Roll-Up Door" },
+      { src: image9578, description: "Back Hollow Metal Roll-Up Door" },
+      { src: imagebrokendoor1, description: "Before Repair on Roll-Up Door (left side)" },
+      { src: image0248, description: "After Repair on Roll-Up Door (left side)" },
+      { src: imagebrokendoor2, description: "Before Repair on Roll-Up Door (right side)"},
+      { src: image0249, description: "After Repair on Roll-Up Door (right side)"}
+    ];
+  
+    const handleImageClick = (index) => {
+      setCurrentIndex(index);
+      setLightboxOpen(true);
+    };
+  
     return (
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered size="xl">
           <Modal.Header closeButton>
@@ -36,60 +61,80 @@ const CommercialModal = (props) => {
               {/* row 1 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={image0629}></img>
-                  <p>Front Gate</p>                  
+                  <img onClick={() => handleImageClick(0)} src={image0629}></img>
+                  <p>Front Commercial Gate</p>                  
                 </div>
                 <div>
-                  <img src={image0630}></img>
-                  <p>Back Gate</p>
+                  <img onClick={() => handleImageClick(1)} src={image0630}></img>
+                  <p>Back Commercial Gate</p>
                 </div>
               </div>
-                {/* video */}
 
               {/* row 2 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={image9580}></img>
-                  <p>Front Roll-up Door</p>
+                  <img onClick={() => handleImageClick(2)} src={image9580}></img>
+                  <p>Front Hollow Metal Roll-Up Door</p>
                 </div>
                 <div>
-                  <img src={image9578}></img>
-                  <p>Back Roll-up Door</p>
+                  <img onClick={() => handleImageClick(3)} src={image9578}></img>
+                  <p>Back Hollow Metal Roll-Up Door</p>
                 </div>
               </div>
-                {/* video */}
 
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={imagebrokendoor1}></img>
-                  <p>Before Repair</p>
+                  <img onClick={() => handleImageClick(4)} src={imagebrokendoor1}></img>
+                  <p>Before Repair on Roll-Up Door (left side)</p>
                 </div>
                 <div>
-                  <img src={image0248}></img>
-                  <p>After Repair</p>
+                  <img onClick={() => handleImageClick(5)} src={image0248}></img>
+                  <p>After Repair on Roll-Up Door (left side)</p>
                 </div>
               </div>
-                {/* video */}
 
               {/* row 4 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img src={imagebrokendoor2}></img>
-                  <p>Before Repair</p>
+                  <img onClick={() => handleImageClick(6)} src={imagebrokendoor2}></img>
+                  <p>Before Repair on Roll-Up Door (right side)</p>
                 </div>
                 <div>
-                  <img src={image0249}></img>
-                  <p>After Repair</p>
+                  <img onClick={() => handleImageClick(7)} src={image0249}></img>
+                  <p>After Repair on Roll-Up Door (right side)</p>
                 </div>
               </div>
-                {/* video */}
 
             </Container>
           </Modal.Body>
           <Modal.Footer>
             <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
           </Modal.Footer>
+          {/* Lightbox */}
+          <Lightbox
+            open={lightboxOpen}
+            close={() => setLightboxOpen(false)}
+            slides={images}
+            index={currentIndex}
+            setIndex={setCurrentIndex}
+            render={{
+              slide: ({ slide }) => (
+                <div style={{ position: "relative", textAlign: "center", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={slide.src} alt={slide.description} style={{ maxWidth: "66%"}} />
+                  <p style={{
+                    color: "white",
+                    fontSize: "1.2rem",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
+                    padding: "5px",
+                    borderRadius: "5px",
+                  }}>
+                    {slide.description}
+                  </p>
+                </div>
+              ),
+            }}
+          />
         </Modal>
       );
     }
