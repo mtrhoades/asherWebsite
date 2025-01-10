@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaPhoneAlt } from "react-icons/fa";
 import { MDBContainer, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+
+// lightbox
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 // images for gallery 1
 import image9118 from '../../images/Asher garage images/residential/servicesimages/IMG_9118.jpg';
 import image9119 from '../../images/Asher garage images/residential/servicesimages/IMG_9119.jpg';
 import image9120 from '../../images/Asher garage images/residential/carouselimages/IMG_9120.jpg';
 import image9116 from '../../images/Asher garage images/residential/servicesimages/IMG_9116.jpg';
-import image9117 from '../../images/Asher garage images/residential/servicesimages/IMG_9117.jpg';
 
 // images for gallery 2
-import image0467 from '../../images/Asher garage images/commercial/IMG_0467.jpg';
 import image9578 from '../../images/Asher garage images/commercial/IMG_9578.jpg';
 import image9580 from '../../images/Asher garage images/commercial/IMG_9580.jpg';
 import image0629 from '../../images/Asher garage images/commercial/IMG_0629.jpg';
@@ -23,9 +25,34 @@ import image7969 from '../../images/Asher garage images/drivewaygates/servicesim
 import image7968 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7968.jpg';
 import image7967 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7967.jpg';
 import image7945 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7945.jpg';
-import image9072 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_9072.jpg';
 
 const AboutModal = (props) => {
+
+  // lightbox
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    { src: image9118, description: 'Custom residential service with overlapping garage doors' },
+    { src: image9119, description: 'Custom residential service with overlapping garage doors' },
+    { src: image9120, description: 'Custom residential service with overlapping garage doors' },
+    { src: image9116, description: 'Custom residential service with overlapping garage doors' },
+    { src: image9580, description: 'Custom commercial service with hollow metal roll-up door (front)' },
+    { src: image9578, description: 'Custom commercial service with hollow metal roll-up door (back)' },
+    { src: image0629, description: 'Custom commercial service with entrance gate' },
+    { src: image0630, description: 'Custom commerical service with exit gate' },
+    { src: image7969, description: 'Custom designed automatic driveway gate' },
+    { src: image7968, description: 'Custom designed automatic driveway gate' },
+    { src: image7967, description: 'Custom designed automatic driveway gate' },
+    { src: image7945, description: 'Custom designed automatic driveway gate with solar powered operator' }
+
+  ];
+
+  const handleImageClick = (index) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };  
+
   return (
     <Modal
       {...props}
@@ -43,96 +70,75 @@ const AboutModal = (props) => {
         <p>
           At Asher's Door Services LLC, we bring over 20 years of experience and expertise in the garage door and driveway gate industry to homes and businesses across the beautiful island of Maui. Asher has worked with some of the largest companies on the commercial side and countless residential properties in diverse neighborhoods, earning a reputation for excellence and craftsmanship.
           <br></br>
-          Our family-run business is dedicated to providing customized solutions for every client. From premium garage doors by Clopay to durable Janus roll-up doors and bespoke automatic driveway gates, we ensure every project is tailored to meet your unique needs. Whether it’s designing a one-of-a-kind gate using advanced CNC technology, installing high-quality Liftmaster operators, or repairing and maintaining your existing systems, our commitment to quality and customer satisfaction shines through in every job we do.
-          <br></br>
           At Asher's Door Services LLC, we don’t just provide products—we create lasting solutions that combine functionality, security, and style, always backed by a personal touch that comes from working with a local, family-oriented business.
         </p>
 
-        <h4>Residential Services</h4>
+        <h4>Customized Services</h4>
+        <p>Our family-run business is dedicated to providing customized solutions for every client. From premium garage doors by Clopay to durable Janus roll-up doors and bespoke automatic driveway gates, we ensure every project is tailored to meet your unique needs. Whether it’s designing a one-of-a-kind gate using advanced CNC technology, installing high-quality Liftmaster operators, or repairing and maintaining your existing systems, our commitment to quality and customer satisfaction shines through in every job we do.
+        </p>
+
+        <h5>Custom Residential Services</h5>
+        <p>Our residential services showcase the precision and expertise that define Asher's Door Services LLC. These featured garage doors, below, highlight a prime example of a custom installation, where overlapping doors required meticulous planning and exact spacing to ensure smooth operation. This project demonstrates our ability to tailor solutions for unique challenges, combining functionality with seamless design. Whether it's accommodating complex layouts or achieving a specific aesthetic, we take pride in delivering exceptional results that meet each client's unique needs.</p>
+
         {/* <!-- Gallery 1--> */}
         <div className="galleryGrid1">
-
           <div>
-            <img src={image9120}></img>
+            <img onClick={() => handleImageClick(0)} src={image9120}></img>
           </div>
 
           <div>
-            <img src={image9119}></img>
+            <img onClick={() => handleImageClick(1)} src={image9119}></img>
           </div>
 
           <div>
-            <img src={image9118}></img>
+            <img onClick={() => handleImageClick(2)} src={image9118}></img>
           </div>
 
-          {/* <div>
-            <img src={image9117}></img>
-          </div> */}
-
-          {/* <div>
-            <h4>Garage door installation with overlapping doors.</h4>
-            <p>This particular installation was done with both garage doors overlapping each other on the ceiling, with just enough space to move past each other to work properly. This shows one of Asher's ingenuius ways of solving particular problems that may occur with your property.
-            </p>
-          </div> */}
-
           <div>
-            <img src={image9116}></img>
+            <img onClick={() => handleImageClick(3)} src={image9116}></img>
           </div>
         </div>
-        <h4>Commercial Services</h4>
+
+        <h5>Custom Commercial Services</h5>
+        <p>Our commercial services exemplify the versatility and reliability of Asher's Door Services LLC. The showcased images highlight our expertise in custom-building commercial gates and installing durable hollow-metal roll-up doors designed to withstand heavy-duty use. In addition to new installations, we specialize in comprehensive repair services to ensure your commercial doors and gates remain fully functional and secure. Whether it’s crafting a gate to meet specific operational needs or restoring existing systems to optimal performance, we are committed to providing customized solutions that keep your business running smoothly.</p>
+
         {/* <!-- Gallery 2--> */}
         <div className="galleryGrid2">
         <div>
-            <img src={image9580}></img>
+            <img onClick={() => handleImageClick(4)} src={image9580}></img>
           </div>
 
           <div>
-            <img src={image9578}></img>
+            <img onClick={() => handleImageClick(5)} src={image9578}></img>
           </div>
 
           <div>
-            <img src={image0630}></img>
+            <img onClick={() => handleImageClick(6)} src={image0630}></img>
           </div>
-
-          {/* <div>
-            <h4>Hollow Metal Roll-up Doors & Commercial Gates</h4>
-            <p>Asher is very comfortable working with any commercial business and is particularly good at installing hollow metal roll-up doors as seen in this gallery, as well as commercial drive-in/out gates. Any type of customization can be done.</p>
-          </div> */}
 
           <div>
-            <img src={image0629}></img>
+            <img onClick={() => handleImageClick(7)} src={image0629}></img>
           </div>
-
-          {/* <div>
-            <img src={image0467}></img>
-          </div> */}
-
         </div>
-        <h4>Driveway Gates</h4>
+
+        <h5>Custom Automatic Driveway Gates</h5>
+        <p>Our custom automatic driveway gates highlight the exceptional craftsmanship and innovation of Asher's Door Services LLC. Featured here is a stunning 28-ft-long gate, designed and built to combine elegance with functionality. Using advanced CNC technology, we brought this one-of-a-kind design to life, showcasing the limitless customization options available to our clients. Constructed with premium materials, including options like "knot wood," this gate pairs style with durability. It is equipped with a Liftmaster operator, offering choices for solar-powered or A/C-powered systems, and includes a state-of-the-art keypad entry system for enhanced convenience and security. This project is a testament to our ability to create custom solutions that make a bold statement while meeting the highest standards of quality and performance.</p>
         {/* Gallery 3 */}
         <div className="galleryGrid3">
         <div>
-            <img src={image7969}></img>
+            <img onClick={() => handleImageClick(8)} src={image7969}></img>
           </div>
 
           <div>
-            <img src={image7968}></img>
+            <img onClick={() => handleImageClick(9)} src={image7968}></img>
           </div>
 
           <div>
-            <img src={image7967}></img>
+            <img onClick={() => handleImageClick(10)} src={image7967}></img>
           </div>
 
-          {/* <div>
-            <img src={image9072}></img>
-          </div> */}
-
-          {/* <div>
-            <h4>Customized Driveway Gates</h4>
-            <p>Asher services include building customized driveway gates. As you can see in this gallery, this 28ft. long gate was custom made with a CNC machine. There are options to use solar or A/C powered devices for the operators, and of course key pad systems.</p>
-          </div> */}
-
           <div>
-            <img src={image7945}></img>
+            <img onClick={() => handleImageClick(11)} src={image7945}></img>
           </div>
         </div>
         <MDBContainer>
@@ -160,6 +166,27 @@ const AboutModal = (props) => {
       <Modal.Footer>
         <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
       </Modal.Footer>
+             {/* Lightbox */}
+             <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={images}
+        index={currentIndex}
+        setIndex={setCurrentIndex}
+        render={{
+          slide: ({ slide }) => (
+            <div style={{ textAlign: "center" }}>
+              <img src={slide.src} alt={slide.description} style={{ maxWidth: "66%"}} />
+              <p style={{
+                color: "white",
+                fontSize: "1.2rem",
+              }}>
+                {slide.description}
+              </p>
+            </div>
+          ),
+        }}
+      />
     </Modal>
   )
 }
