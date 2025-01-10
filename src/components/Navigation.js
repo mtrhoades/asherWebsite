@@ -6,7 +6,7 @@ import { BsList, BsX } from 'react-icons/bs';
 import { FaPhoneAlt } from "react-icons/fa";
 import AboutModal from './Modals/AboutModal';
 
-const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
+const Navigation = ({ onServicesClick, onContactClick, onTestimonialsClick }) => {
     // modal state for about us
     const [modalShow, setModalShow] = React.useState(false);
     
@@ -53,7 +53,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
             <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
-            <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
+            <Nav.Link onClick={() => handleMenuItemClick(onTestimonialsClick)}>Reviews</Nav.Link>
             <Nav.Link style={{color: '#386BC0'}} href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Navigation = ({ onServicesClick, onContactClick, onReviewsClick }) => {
             <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onServicesClick)}>Services</Nav.Link>
             <Nav.Link onClick={() => handleMenuItemClick(onContactClick)}>Contact</Nav.Link>
-            <Nav.Link onClick={() => handleMenuItemClick(onReviewsClick)}>Reviews</Nav.Link>
+            <Nav.Link onClick={() => handleMenuItemClick(onTestimonialsClick)}>Reviews</Nav.Link>
             <Nav.Link style={{color: '#386BC0'}} href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call Now!</Nav.Link>
           </Nav>
         </Navbar.Collapse>
