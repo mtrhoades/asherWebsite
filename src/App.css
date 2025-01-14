@@ -102,10 +102,9 @@ h1 {
 }
 
 .hero-overlay {
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
-  background-color: rgba(171, 183, 201, 0.5); /* Semi-transparent background */
+  background-color: #bbdaf6;
   z-index: 2;
   pointer-events: none; /* Allow carousel interactions */
 }
@@ -252,4 +251,80 @@ h1 {
   height: auto;
   object-fit: cover;
   border-radius: 5px;
+}
+
+ /* reviews section (testimonials) */
+
+ #testimonials {
+  padding: 1rem;
+  background-color: #bbdaf6;
+  font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+  color: #333;
+  text-align: center;
+}
+
+.reviews-list {
+  text-align: center;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.review-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #007BFF;
+}
+
+.review-item p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #bbdaf6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-form form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-form input, .review-form textarea, .review-form select, .review-form button {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.review-form button {
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background-color: #0056b3;
 }

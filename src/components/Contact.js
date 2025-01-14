@@ -28,7 +28,7 @@ const Contact = () => {
                 </MDBCol>
             </MDBContainer>
 
-            <form action="https://formsubmit.co/0808b71977531437c237c69e8197054d" method="POST" id='form' className='text-center' style={{ width: '100%', maxWidth: '400px' }}>
+            <form action="https://formsubmit.co/0808b71977531437c237c69e8197054d" method="POST" id='form' className='text-center' style={{ width: '100%', maxWidth: '45%' }}>
                 <MDBInput label='Name' name="name" v-model='name' wrapperClass='mb-4' />
 
                 <MDBInput type='email' name="email" label='Email address' v-model='email' wrapperClass='mb-4' />
