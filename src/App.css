@@ -192,6 +192,7 @@ h1 {
 }
 
 .contact-container {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -302,7 +303,7 @@ h2, h3 {
   padding: 1rem;
   border-radius: 5px;
   background-color: #bbdaf6;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .review-form form {
@@ -311,6 +312,7 @@ h2, h3 {
   flex-direction: column;
   gap: 0.5rem;
 }
+
 
 .review-form input, .review-form textarea, .review-form select, .review-form button {
   padding: 0.5rem;
@@ -327,4 +329,20 @@ h2, h3 {
 
 .review-form button:hover {
   background-color: #0056b3;
+}
+
+.contactForm {
+  padding: 1rem;
+  width: 100%;
+  max-width: 45%;
+}
+
+@media (max-width: 1000px) {
+  .contactForm {
+    max-width: 100%;
+  }
+
+  .review-form form{
+    width: 100%;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea, MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState(() => {
@@ -71,7 +72,7 @@ const Testimonials = () => {
             <option value="4">4 - Very Good</option>
             <option value="5">5 - Excellent</option>
           </select>
-          <button type="submit">Submit Review</button>
+          <MDBBtn type="submit" color="primary" block className='my-4'>Submit Review</MDBBtn>
         </form>
       </div>
     </div>
