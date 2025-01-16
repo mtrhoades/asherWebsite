@@ -6,7 +6,7 @@ const Testimonials = () => {
     // Retrieve reviews from localStorage or use default reviews
     const savedReviews = localStorage.getItem('reviews');
     return savedReviews ? JSON.parse(savedReviews) : [
-      { name: 'John Doe', comment: 'Excellent service and quality installation!', rating: 5 },
+      { name: 'Blackburn-Rhoades Ohana', comment: 'Excellent service and quality installation! Definitley Recommend!', rating: 5 },
       { name: 'Jane Smith', comment: 'Professional and timely. Highly recommend!', rating: 4 },
       { name: 'Mike Johnson', comment: 'Affordable and reliable service.', rating: 5 },
     ];

@@ -25,6 +25,10 @@ import image0140 from '../../images/Asher garage images/drivewaygates//IMG_0140.
 import image7679 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7679.jpg';
 import image9072 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_9072.jpg';
 
+// videos
+import adgcustomcut from '../../videos/adgcustomcut.mp4';
+import adgbarndoor from '../../videos/adgbarndoor.mp4';
+
 const DrivewaygateModal = (props) => {
 
     // lightbox
@@ -85,6 +89,13 @@ const DrivewaygateModal = (props) => {
                 </div>
               </div>
 
+              {/* new row for video */}
+              <div>
+                <video controls width="350">
+                    <source src={adgcustomcut} type="video/mp4" />
+                </video>
+              </div>
+
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
@@ -116,10 +127,16 @@ const DrivewaygateModal = (props) => {
                   <p>Solar Powered Operator</p>
                 </div>
                 <div>
-
-                  {/* <img onClick={() => handleImageClick(9)} src={image9072}></img>
-                  <p>State of the art Key Pad System</p> */}
+                  <img onClick={() => handleImageClick(9)} src={image9072}  alt="key pad system"></img>
+                  <p>State of the art Key Pad System</p>
                 </div>
+              </div>
+
+              {/* new row for video */}
+              <div>
+                <video controls width="350">
+                    <source src={adgbarndoor} type="video/mp4" />
+                </video>
               </div>
 
             </Container>

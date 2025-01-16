@@ -22,6 +22,9 @@ import image0248 from '../../images/Asher garage images/commercial/IMG_0248.jpg'
 import imagebrokendoor2 from '../../images/Asher garage images/commercial/brokendoor2.jpg';
 import image0249 from '../../images/Asher garage images/commercial/IMG_0249.jpg';
 
+// videos
+import comrollupdoor from '../../videos/comrollupdoor.mp4';
+
 const CommercialModal = (props) => {
 
     // lightbox
@@ -80,6 +83,13 @@ const CommercialModal = (props) => {
                 </div>
               </div>
 
+              {/* new row for video */}
+              <div>
+                <video controls height="350" width="350">
+                    <source src={comrollupdoor} type="video/mp4" />
+                </video>
+              </div>
+            
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>

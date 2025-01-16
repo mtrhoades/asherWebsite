@@ -21,6 +21,9 @@ import image0439 from '../../images/Asher garage images/residential/servicesimag
 import image9253 from '../../images/Asher garage images/residential/carouselimages/IMG_9253.jpg';
 import image9252 from '../../images/Asher garage images/residential/servicesimages/IMG_9252.jpg';
 
+// videos
+import resbrownback from '../../videos/resbrownback.mp4'
+
 const ResidentialModal = (props) => {
 
   // lightbox
@@ -63,6 +66,13 @@ const ResidentialModal = (props) => {
               <img onClick={() => handleImageClick(1)} src={image6917} alt="residential garage door brown back"></img>
               <p>Back Garage Door, newly installed</p>
             </div>
+          </div>
+
+          {/* new row for video */}
+          <div>
+            <video controls width="350">
+                <source src={resbrownback} type="video/mp4" />
+            </video>
           </div>
 
           {/* row 2 front/back images*/}

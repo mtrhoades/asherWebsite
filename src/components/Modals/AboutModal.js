@@ -26,6 +26,10 @@ import image7968 from '../../images/Asher garage images/drivewaygates/servicesim
 import image7967 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7967.jpg';
 import image7945 from '../../images/Asher garage images/drivewaygates/servicesimages/IMG_7945.jpg';
 
+// videos
+import adgcustomlong from '../../videos/adgcustomlong.mp4';
+import adgcustomlong2 from '../../videos/adgcustomlong2.mp4';
+
 const AboutModal = (props) => {
 
   // lightbox
@@ -45,7 +49,6 @@ const AboutModal = (props) => {
     { src: image7968, description: 'Custom designed automatic driveway gate' },
     { src: image7967, description: 'Custom designed automatic driveway gate' },
     { src: image7945, description: 'Custom designed automatic driveway gate with solar powered operator' }
-
   ];
 
   const handleImageClick = (index) => {
@@ -140,7 +143,22 @@ const AboutModal = (props) => {
           <div>
             <img onClick={() => handleImageClick(11)} src={image7945} alt="automatic driveway gate custom build, long 28ft. 4"></img>
           </div>
+
         </div>
+        
+        {/* new row for video */}
+        <div>
+          <video controls width="350">
+              <source src={adgcustomlong} type="video/mp4" />
+          </video>
+        </div>
+
+        <div>
+          <video controls width="350">
+              <source src={adgcustomlong2} type="video/mp4" />
+          </video>
+        </div>
+
         <MDBContainer>
         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
             <p>
