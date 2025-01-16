@@ -37,9 +37,6 @@ const Contact = () => {
 
                 <MDBTextArea wrapperClass='mb-4' name="message" label='Message' />
 
-                {/* <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' /> */}
-                {/* ^ will this work alone? might need to remove, unless logic for it is easy? */}
-
                 <MDBBtn type="submit" color='primary' block className='my-4'>
                     Send
                 </MDBBtn>

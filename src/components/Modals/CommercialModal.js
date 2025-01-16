@@ -120,14 +120,16 @@ const CommercialModal = (props) => {
             setIndex={setCurrentIndex}
             render={{
               slide: ({ slide }) => (
-                <div style={{ position: "relative", textAlign: "center", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={slide.src} alt={slide.description} style={{ maxWidth: "66%"}} />
+                <div style={{ position: "relative", textAlign: "center", zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={slide.src} alt={slide.description} style={{ maxWidth: "100%"}} />
                   <p style={{
                     color: "white",
                     fontSize: "1.2rem",
-                    backgroundColor: "rgba(0, 0, 0, 0.6)",
-                    padding: "5px",
-                    borderRadius: "5px",
+                    position: "absolute",
+                    top: 200,
+                    zIndex: 2,
+                    paddingLeft: "10px",
+                    textShadow: "3px 2px 3px grey, 0 0 1em black, 0 0 0.2em black"    
                   }}>
                     {slide.description}
                   </p>

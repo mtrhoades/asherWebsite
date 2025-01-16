@@ -49,7 +49,7 @@ const Testimonials = () => {
       </div>
 
       <div className="review-form">
-        <h3>Leave a Review</h3>
+        <h3 style={{  color: '#386BC0', textShadow: "2px 1px 2px grey, 0 0 1em white, 0 0 0.2em white" }}>Leave a Review</h3>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
