@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
 
 // lightbox
@@ -61,16 +59,16 @@ const DrivewaygateModal = (props) => {
           <Modal.Body className="grid-example">
             <Container>
               {/* intro text here */}
-              <p>At Asher's Door Services LLC, we specialize in crafting and installing fully customized automatic driveway gates designed to enhance the security and elegance of your property. Using advanced CNC technology, we can cut intricate, personalized designs out of metal, allowing your gate to reflect your unique style. Our gates are built with premium materials like aluminum, steel, and stainless steel, as well as innovative options like "knot wood," an aluminum finish that mimics the natural beauty of wood. Paired with dependable <a target="_blank" href="https://www.liftmaster.com/">Liftmaster</a> operators, we offer both solar-powered and A/C-powered systems, along with state-of-the-art keypad entry systems for added convenience and security. To complete the look, we can custom-build matching side doors for seamless design integration. Whether it’s installation, repairs, or complete customization, our family-run business brings over 20 years of expertise to every project, delivering gates that are as durable as they are distinctive.</p>
+              <p>At Asher's Door Services LLC, we specialize in crafting and installing fully customized automatic driveway gates designed to enhance the security and elegance of your property. Using advanced CNC technology, we can cut intricate, personalized designs out of metal, allowing your gate to reflect your unique style. Our gates are built with premium materials like aluminum, steel, and stainless steel, as well as innovative options like "knot wood," an aluminum finish that mimics the natural beauty of wood. Paired with dependable <a target="_blank" rel="noreferrer" href="https://www.liftmaster.com/">Liftmaster</a> operators, we offer both solar-powered and A/C-powered systems, along with state-of-the-art keypad entry systems for added convenience and security. To complete the look, we can custom-build matching side doors for seamless design integration. Whether it’s installation, repairs, or complete customization, our family-run business brings over 20 years of expertise to every project, delivering gates that are as durable as they are distinctive.</p>
 
               {/* row 1 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(0)} src={image0343}></img>
+                  <img onClick={() => handleImageClick(0)} src={image0343} alt="automatic driveway gate, knot wood material used, front"></img>
                   <p>Customized Front Gate (Knot Wood)</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(1)} src={image0293}></img>
+                  <img onClick={() => handleImageClick(1)} src={image0293} alt="automatic driveway gate, knot wood material used, back"></img>
                   <p>Customized Back Gate (Knot Wood)</p>
                 </div>
               </div>
@@ -78,11 +76,11 @@ const DrivewaygateModal = (props) => {
               {/* row 2 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(2)} src={image9793}></img>
+                  <img onClick={() => handleImageClick(2)} src={image9793} alt="automatic driveway gate, custom cut front"></img>
                   <p>Customized Front Gate</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(3)} src={image9794}></img>
+                  <img onClick={() => handleImageClick(3)} src={image9794} alt="automatic driveway gate, custom cut back"></img>
                   <p>Customized Back Gate</p>
                 </div>
               </div>
@@ -90,11 +88,11 @@ const DrivewaygateModal = (props) => {
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(4)} src={image7680}></img>
+                  <img onClick={() => handleImageClick(4)} src={image7680} alt="automatic driveway gate in hana"></img>
                   <p>Customized Front Gate in Hana</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(6)} src={image0136}></img>
+                  <img onClick={() => handleImageClick(6)} src={image0136} alt="automatic driveway gate, custom green"></img>
                   <p>Customized Front Gate (green)</p>
                 </div>
               </div>
@@ -102,11 +100,11 @@ const DrivewaygateModal = (props) => {
               {/* row 4 */}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(5)} src={image7677}></img>
+                  <img onClick={() => handleImageClick(5)} src={image7677} alt="automatic driveway gate in hana operator"></img>
                   <p>Customized Gate in Hana with LiftMaster Operator</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(7)} src={image0140}></img>
+                  <img onClick={() => handleImageClick(7)} src={image0140} alt="side-door gate, custom green"></img>
                   <p>Customized Side Door to go with Gate (green)</p>
                 </div>
               </div>
@@ -114,12 +112,13 @@ const DrivewaygateModal = (props) => {
               {/* row 5 */}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(8)} src={image7679}></img>
+                  <img onClick={() => handleImageClick(8)} src={image7679} alt="solar powered operator"></img>
                   <p>Solar Powered Operator</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(9)} src={image9072}></img>
-                  <p>State of the art Key Pad System</p>
+
+                  {/* <img onClick={() => handleImageClick(9)} src={image9072}></img>
+                  <p>State of the art Key Pad System</p> */}
                 </div>
               </div>
 

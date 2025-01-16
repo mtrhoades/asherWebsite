@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
 
 // lightbox
@@ -56,16 +54,16 @@ const CommercialModal = (props) => {
           <Modal.Body className="grid-example">
             <Container>
               {/* intro text here */}
-              <p>At Asher's Door Services LLC, we provide comprehensive solutions for commercial properties, specializing in the supply, installation, and repair of high-quality doors and gates. Our offerings include durable <a target="_blank" href="https://www.janusintl.com/rolling-steel-doors">Janus</a> brand metal roll-up doors, reliable <a target="_blank" href="https://www.liftmaster.com/">Liftmaster</a> operators, and hollow-metal doors designed for heavy-duty use. We also excel in crafting custom-made gates that combine functionality and style to meet the unique needs of your business. Whether you're outfitting a warehouse, retail space, or industrial facility, our family-run business brings over 20 years of expertise to every project, ensuring your doors and gates are built to last and operate seamlessly.</p>
+              <p>At Asher's Door Services LLC, we provide comprehensive solutions for commercial properties, specializing in the supply, installation, and repair of high-quality doors and gates. Our offerings include durable <a target="_blank" rel="noreferrer" href="https://www.janusintl.com/rolling-steel-doors">Janus</a> brand metal roll-up doors, reliable <a target="_blank" rel="noreferrer" href="https://www.liftmaster.com/">Liftmaster</a> operators, and hollow-metal doors designed for heavy-duty use. We also excel in crafting custom-made gates that combine functionality and style to meet the unique needs of your business. Whether you're outfitting a warehouse, retail space, or industrial facility, our family-run business brings over 20 years of expertise to every project, ensuring your doors and gates are built to last and operate seamlessly.</p>
 
               {/* row 1 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(0)} src={image0629}></img>
+                  <img onClick={() => handleImageClick(0)} src={image0629} alt="commerical fence gate entrance"></img>
                   <p>Front Commercial Gate</p>                  
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(1)} src={image0630}></img>
+                  <img onClick={() => handleImageClick(1)} src={image0630} alt="commerical fence gate exit"></img>
                   <p>Back Commercial Gate</p>
                 </div>
               </div>
@@ -73,11 +71,11 @@ const CommercialModal = (props) => {
               {/* row 2 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(2)} src={image9580}></img>
+                  <img onClick={() => handleImageClick(2)} src={image9580} alt="commerical hollow metal roll-up door front"></img>
                   <p>Front Hollow Metal Roll-Up Door</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(3)} src={image9578}></img>
+                  <img onClick={() => handleImageClick(3)} src={image9578} alt="commerical hollow metal roll-up door back"></img>
                   <p>Back Hollow Metal Roll-Up Door</p>
                 </div>
               </div>
@@ -85,11 +83,11 @@ const CommercialModal = (props) => {
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(4)} src={imagebrokendoor1}></img>
+                  <img onClick={() => handleImageClick(4)} src={imagebrokendoor1} alt="commerical repair, before on roll-up door left side"></img>
                   <p>Before Repair on Roll-Up Door (left side)</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(5)} src={image0248}></img>
+                  <img onClick={() => handleImageClick(5)} src={image0248} alt="commerical repair after, on roll-up door left side"></img>
                   <p>After Repair on Roll-Up Door (left side)</p>
                 </div>
               </div>
@@ -97,11 +95,11 @@ const CommercialModal = (props) => {
               {/* row 4 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(6)} src={imagebrokendoor2}></img>
+                  <img onClick={() => handleImageClick(6)} src={imagebrokendoor2} alt="commerical repair, before on roll-up door right side"></img>
                   <p>Before Repair on Roll-Up Door (right side)</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(7)} src={image0249}></img>
+                  <img onClick={() => handleImageClick(7)} src={image0249} alt="commerical repair, after on roll-up door right side"></img>
                   <p>After Repair on Roll-Up Door (right side)</p>
                 </div>
               </div>

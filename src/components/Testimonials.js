@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea, MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBBtn } from 'mdb-react-ui-kit';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState(() => {

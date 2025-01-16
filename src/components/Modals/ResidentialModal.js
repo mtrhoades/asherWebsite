@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
 import { FaPhoneAlt } from "react-icons/fa";
 
 // lightbox
@@ -53,16 +51,16 @@ const ResidentialModal = (props) => {
       <Modal.Body className="grid-example">
         <Container>
           {/* intro text here */}
-          <p>At Asher's Door Services LLC, we specialize in providing top-quality residential garage door solutions tailored to meet your unique needs. With over 20 years of experience, our family-run business proudly supplies premium garage doors from trusted brands like <a target="_blank" href="https://www.clopaydoor.com/?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQiAj9m7BhD1ARIsANsIIvCj-0NDWRKvRJ_k5tv6I78l_AxMo_WaDXta1WkRVRc8x3UUcMgvxfoaAhEIEALw_wcB">Clopay</a> and reliable openers from <a target="_blank" href="https://www.liftmaster.com/">Liftmaster.</a> From installations to repairs, our team is dedicated to ensuring your garage door operates flawlessly. We also offer custom programming for remotes and personalized designs to perfectly complement your home's style. Whether you're looking for a sleek, modern look or a timeless design, we deliver exceptional craftsmanship and service you can trust.</p>
+          <p>At Asher's Door Services LLC, we specialize in providing top-quality residential garage door solutions tailored to meet your unique needs. With over 20 years of experience, our family-run business proudly supplies premium garage doors from trusted brands like <a target="_blank" rel="noreferrer" href="https://www.clopaydoor.com/?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQiAj9m7BhD1ARIsANsIIvCj-0NDWRKvRJ_k5tv6I78l_AxMo_WaDXta1WkRVRc8x3UUcMgvxfoaAhEIEALw_wcB">Clopay</a> and reliable openers from <a target="_blank" rel="noreferrer" href="https://www.liftmaster.com/">Liftmaster.</a> From installations to repairs, our team is dedicated to ensuring your garage door operates flawlessly. We also offer custom programming for remotes and personalized designs to perfectly complement your home's style. Whether you're looking for a sleek, modern look or a timeless design, we deliver exceptional craftsmanship and service you can trust.</p>
 
           {/* row 1 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img onClick={() => handleImageClick(0)} src={image6915}></img>
+              <img onClick={() => handleImageClick(0)} src={image6915} alt="residential garage door brown front"></img>
               <p>Front Garage Door (brown), newly installed</p>
             </div>
             <div>
-              <img onClick={() => handleImageClick(1)} src={image6917}></img>
+              <img onClick={() => handleImageClick(1)} src={image6917} alt="residential garage door brown back"></img>
               <p>Back Garage Door, newly installed</p>
             </div>
           </div>
@@ -70,11 +68,11 @@ const ResidentialModal = (props) => {
           {/* row 2 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img onClick={() => handleImageClick(2)} src={image0440}></img>
+              <img onClick={() => handleImageClick(2)} src={image0440} alt="residential garage door blue front"></img>
               <p>Front Garage Door (blue), newly installed</p>
             </div>
             <div>
-              <img onClick={() => handleImageClick(3)} src={image0439}></img>
+              <img onClick={() => handleImageClick(3)} src={image0439} alt="residential garage door blue back"></img>
               <p>Back Garage Door, newly installed</p>
             </div>
           </div>
@@ -82,11 +80,11 @@ const ResidentialModal = (props) => {
           {/* row 3 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img onClick={() => handleImageClick(4)} src={image9253}></img>
+              <img onClick={() => handleImageClick(4)} src={image9253} alt="residential garage door cedar home front"></img>
               <p>Front Garage Door (cedar), newly installed</p>
             </div>
             <div>
-              <img onClick={() => handleImageClick(5)} src={image9252}></img>
+              <img onClick={() => handleImageClick(5)} src={image9252} alt="residential garage door cedar home back"></img>
               <p>Back Garage Door, newly installed</p>
             </div>
           </div>

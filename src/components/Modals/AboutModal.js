@@ -83,19 +83,19 @@ const AboutModal = (props) => {
         {/* <!-- Gallery 1--> */}
         <div className="galleryGrid1">
           <div>
-            <img onClick={() => handleImageClick(0)} src={image9120}></img>
+            <img onClick={() => handleImageClick(0)} src={image9120} alt="overlapping garage doors inside 1"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(1)} src={image9119}></img>
+            <img onClick={() => handleImageClick(1)} src={image9119} alt="overlapping garage doors inside 2"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(2)} src={image9118}></img>
+            <img onClick={() => handleImageClick(2)} src={image9118} alt="overlapping garage doors inside 3"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(3)} src={image9116}></img>
+            <img onClick={() => handleImageClick(3)} src={image9116} alt="overlapping garage doors inside 4"></img>
           </div>
         </div>
 
@@ -105,19 +105,19 @@ const AboutModal = (props) => {
         {/* <!-- Gallery 2--> */}
         <div className="galleryGrid2">
         <div>
-            <img onClick={() => handleImageClick(4)} src={image9580}></img>
+            <img onClick={() => handleImageClick(4)} src={image9580} alt="commercial hollow metal roll-up door 1"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(5)} src={image9578}></img>
+            <img onClick={() => handleImageClick(5)} src={image9578} alt="commercial hollow metal roll-up door 2"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(6)} src={image0630}></img>
+            <img onClick={() => handleImageClick(6)} src={image0630} alt="commercial drive in fence gate"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(7)} src={image0629}></img>
+            <img onClick={() => handleImageClick(7)} src={image0629} alt="commercial drive out fence gate"></img>
           </div>
         </div>
 
@@ -126,25 +126,25 @@ const AboutModal = (props) => {
         {/* Gallery 3 */}
         <div className="galleryGrid3">
         <div>
-            <img onClick={() => handleImageClick(8)} src={image7969}></img>
+            <img onClick={() => handleImageClick(8)} src={image7969} alt="automatic driveway gate custom build, long 28ft. 1"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(9)} src={image7968}></img>
+            <img onClick={() => handleImageClick(9)} src={image7968} alt="automatic driveway gate custom build, long 28ft. 2"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(10)} src={image7967}></img>
+            <img onClick={() => handleImageClick(10)} src={image7967} alt="automatic driveway gate custom build, long 28ft. 3"></img>
           </div>
 
           <div>
-            <img onClick={() => handleImageClick(11)} src={image7945}></img>
+            <img onClick={() => handleImageClick(11)} src={image7945} alt="automatic driveway gate custom build, long 28ft. 4"></img>
           </div>
         </div>
         <MDBContainer>
         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
             <p>
-                <a target="_blank" href="https://www.google.com/maps/place/Wailuku,+HI+96793/@20.8915427,-156.551493,13z/data=!3m1!4b1!4m6!3m5!1s0x7954d3425d6317bd:0x2c6350612fb86dba!8m2!3d20.8869433!4d-156.5048344!16zL20vMHMwbmw?entry=ttu&g_ep=EgoyMDI0MTIwOC4wIKXMDSoASAFQAw%3D%3D">
+                <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Wailuku,+HI+96793/@20.8915427,-156.551493,13z/data=!3m1!4b1!4m6!3m5!1s0x7954d3425d6317bd:0x2c6350612fb86dba!8m2!3d20.8869433!4d-156.5048344!16zL20vMHMwbmw?entry=ttu&g_ep=EgoyMDI0MTIwOC4wIKXMDSoASAFQAw%3D%3D">
                     <MDBIcon icon="home" className="me-2" />
                     Wailuku, HI 96793, US
                 </a>
