@@ -36,19 +36,21 @@ const AboutModal = (props) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [
-    { src: image9118, description: 'Custom residential service with overlapping garage doors' },
-    { src: image9119, description: 'Custom residential service with overlapping garage doors' },
-    { src: image9120, description: 'Custom residential service with overlapping garage doors' },
-    { src: image9116, description: 'Custom residential service with overlapping garage doors' },
-    { src: image9580, description: 'Custom commercial service with hollow metal roll-up door (front)' },
-    { src: image9578, description: 'Custom commercial service with hollow metal roll-up door (back)' },
-    { src: image0629, description: 'Custom commercial service with entrance gate' },
-    { src: image0630, description: 'Custom commerical service with exit gate' },
-    { src: image7969, description: 'Custom designed automatic driveway gate' },
-    { src: image7968, description: 'Custom designed automatic driveway gate' },
-    { src: image7967, description: 'Custom designed automatic driveway gate' },
-    { src: image7945, description: 'Custom designed automatic driveway gate with solar powered operator' }
+  const slides = [
+    { src: image9118, description: 'Custom residential service with overlapping garage doors', type: 'image' },
+    { src: image9119, type: 'image' },
+    { src: image9120, type: 'image' },
+    { src: image9116, type: 'image' },
+    { src: image9580, description: 'Custom commercial service with hollow metal roll-up door (front)', type: 'image' },
+    { src: image9578, description: 'Custom commercial service with hollow metal roll-up door (back)', type: 'image' },
+    { src: image0629, description: 'Custom commercial service with entrance gate', type: 'image' },
+    { src: image0630, description: 'Custom commerical service with exit gate', type: 'image' },
+    { src: image7969, description: 'Custom designed automatic driveway gate', type: 'image' },
+    { src: image7968, type: 'image' },
+    { src: image7967, type: 'image' },
+    { src: image7945, description: 'Custom designed automatic driveway gate with solar powered operator', type: 'image' },
+    { src: adgcustomlong, type: 'video' },
+    { src: adgcustomlong2, type: 'video' },
   ];
 
   const handleImageClick = (index) => {
@@ -184,17 +186,29 @@ const AboutModal = (props) => {
       <Modal.Footer>
         <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
       </Modal.Footer>
-             {/* Lightbox */}
-             <Lightbox
+      {/* Lightbox */}
+      <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
-        slides={images}
+        slides={slides}
         index={currentIndex}
         setIndex={setCurrentIndex}
         render={{
           slide: ({ slide }) => (
             <div style={{ textAlign: "center", position: "relative", zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={slide.src} alt={slide.description} style={{ maxWidth: "100%"}} />
+              {slide.type === "image" ? (
+                <img
+                  src={slide.src}
+                  alt={slide.description}
+                  style={{ maxWidth: "100%" }}
+                />
+              ) : (
+                <video
+                  src={slide.src}
+                  controls
+                  style={{ maxWidth: "100%" }}
+                />
+              )}
               <p style={{
                 color: "white",
                 fontSize: "1.2rem",

@@ -35,17 +35,19 @@ const DrivewaygateModal = (props) => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
   
-    const images = [
-      { src: image0343, description: "Customized Front Gate (Knot Wood)" },
-      { src: image0293, description: "Customized Back Gate (Knot Wood)" },
-      { src: image9793, description: "Customized Front Gate" },
-      { src: image9794, description: "Customized Back Gate" },
-      { src: image7680, description: "Customized Front Gate in Hana" },
-      { src: image7677, description: "Customized Gate in Hana with LiftMaster Operator"},
-      { src: image0136, description: "Customized Front Gate (green)" },
-      { src: image0140, description: "Customized Side Door to go with Gate (green)"},
-      { src: image7679, description: "Solar Powered Operator"},
-      { src: image9072, description: "State of the art Key Pad System"}
+    const slides = [
+      { src: image0343, description: "Customized Front Gate (Knot Wood)", type: 'image' },
+      { src: image0293, description: "Back Gate (Knot Wood)", type: 'image' },
+      { src: image9793, description: "Customized Front Gate", type: 'image' },
+      { src: image9794, description: "Back", type: 'image' },
+      { src: adgcustomcut, type: 'video'},
+      { src: image7680, description: "Customized Front Gate in Hana", type: 'image' },
+      { src: image7677, description: "Customized Gate in Hana with LiftMaster Operator", type: 'image'},
+      { src: image0136, description: "Customized Front Gate (green)", type: 'image' },
+      { src: image0140, description: "Customized Side Door to go with Gate (green)", type: 'image'},
+      { src: image7679, description: "Solar Powered Operator", type: 'image'},
+      { src: image9072, description: "State of the art Key Pad System", type: 'image'},
+      { src: adgbarndoor, type: 'video'}
     ];
   
     const handleImageClick = (index) => {
@@ -144,17 +146,29 @@ const DrivewaygateModal = (props) => {
           <Modal.Footer>
             <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
           </Modal.Footer>
-                    {/* Lightbox */}
-                    <Lightbox
+          {/* Lightbox */}
+          <Lightbox
             open={lightboxOpen}
             close={() => setLightboxOpen(false)}
-            slides={images}
+            slides={slides}
             index={currentIndex}
             setIndex={setCurrentIndex}
             render={{
               slide: ({ slide }) => (
-                <div style={{ position: "relative", textAlign: "center", display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1 }}>
-                  <img src={slide.src} alt={slide.description} style={{ maxWidth: "100%"}} />
+                <div style={{ textAlign: "center", position: "relative", zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {slide.type === "image" ? (
+                    <img
+                      src={slide.src}
+                      alt={slide.description}
+                      style={{ maxWidth: "100%" }}
+                    />
+                  ) : (
+                    <video
+                      src={slide.src}
+                      controls
+                      style={{ maxWidth: "100%" }}
+                    />
+                  )}
                   <p style={{
                     color: "white",
                     fontSize: "1.2rem",
@@ -162,7 +176,7 @@ const DrivewaygateModal = (props) => {
                     top: 200,
                     zIndex: 2,
                     paddingLeft: "10px",
-                    textShadow: "3px 2px 3px grey, 0 0 1em black, 0 0 0.2em black"    
+                    textShadow: "3px 2px 3px grey, 0 0 1em black, 0 0 0.2em black"
                   }}>
                     {slide.description}
                   </p>

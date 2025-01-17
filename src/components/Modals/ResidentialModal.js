@@ -8,8 +8,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
-// videos
-
 // images
 // row 1
 import image6915 from '../../images/Asher garage images/residential/servicesimages/IMG_6915.jpg';
@@ -30,13 +28,14 @@ const ResidentialModal = (props) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [
-    { src: image6915, description: 'Front Garage Door (brown), newly installed' },
-    { src: image6917, description: 'Back Garage Door, newly installed' },
-    { src: image0440, description: 'Front Garage Door (blue), newly installed' },
-    { src: image0439, description: 'Back Garage Door, newly installed' },
-    { src: image9253, description: 'Front Garage Door (cedar), newly installed' },
-    { src: image9252, description: 'Back Garage Door, newly installed' },
+  const slides = [
+    { src: image6915, description: 'Front Garage Door (brown), newly installed', type: 'image' },
+    { src: image6917, description: 'Back', type: 'image' },
+    { src: resbrownback, type: 'video' },
+    { src: image0440, description: 'Front Garage Door (blue), newly installed', type: 'image' },
+    { src: image0439, description: 'Back', type: 'image' },
+    { src: image9253, description: 'Front Garage Door (cedar), newly installed', type: 'image' },
+    { src: image9252, description: 'Back', type: 'image' },
   ];
 
   const handleImageClick = (index) => {
@@ -105,16 +104,28 @@ const ResidentialModal = (props) => {
         <Button href="tel:8088668150"><FaPhoneAlt className="fa-2x"/>Call us now!</Button>
       </Modal.Footer>
        {/* Lightbox */}
-       <Lightbox
+      <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
-        slides={images}
+        slides={slides}
         index={currentIndex}
         setIndex={setCurrentIndex}
         render={{
           slide: ({ slide }) => (
             <div style={{ textAlign: "center", position: "relative", zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={slide.src} alt={slide.description} style={{ maxWidth: "100%"}} />
+              {slide.type === "image" ? (
+                <img
+                  src={slide.src}
+                  alt={slide.description}
+                  style={{ maxWidth: "100%" }}
+                />
+              ) : (
+                <video
+                  src={slide.src}
+                  controls
+                  style={{ maxWidth: "100%" }}
+                />
+              )}
               <p style={{
                 color: "white",
                 fontSize: "1.2rem",
