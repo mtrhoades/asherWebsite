@@ -10,7 +10,7 @@ import image9793 from '../images/Asher garage images/drivewaygates/carouselimage
 import image0629 from '../images/Asher garage images/commercial/IMG_0629.jpg';
 import image0440 from '../images/Asher garage images/residential/carouselimages/IMG_0440.jpg';
 import image9580 from '../images/Asher garage images/commercial/IMG_9580.jpg';
-import image6915 from '../images/Asher garage images/residential/servicesimages/IMG_6915.jpeg';
+import image6915 from '../images/Asher garage images/residential/servicesimages/IMG_6915.jpg';
 
 import AboutModal from './Modals/AboutModal';
 

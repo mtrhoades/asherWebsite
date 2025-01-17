@@ -12,8 +12,8 @@ import 'yet-another-react-lightbox/styles.css';
 
 // images
 // row 1
-import image6915 from '../../images/Asher garage images/residential/servicesimages/IMG_6915.jpeg';
-import image6917 from '../../images/Asher garage images/residential/servicesimages/IMG_6917.jpeg';
+import image6915 from '../../images/Asher garage images/residential/servicesimages/IMG_6915.jpg';
+import image6917 from '../../images/Asher garage images/residential/servicesimages/IMG_6917.jpg';
 // row 2
 import image0440 from '../../images/Asher garage images/residential/carouselimages/IMG_0440.jpg';
 import image0439 from '../../images/Asher garage images/residential/servicesimages/IMG_0439.jpg';
