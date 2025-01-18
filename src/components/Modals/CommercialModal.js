@@ -31,15 +31,16 @@ const CommercialModal = (props) => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
   
-    const images = [
-      { src: image0629, description: "Front Commercial Gate" },
-      { src: image0630, description: "Back Commercial Gate" },
-      { src: image9580, description: "Front Hollow Metal Roll-Up Door" },
-      { src: image9578, description: "Back Hollow Metal Roll-Up Door" },
-      { src: imagebrokendoor1, description: "Before Repair on Roll-Up Door (left side)" },
-      { src: image0248, description: "After Repair on Roll-Up Door (left side)" },
-      { src: imagebrokendoor2, description: "Before Repair on Roll-Up Door (right side)"},
-      { src: image0249, description: "After Repair on Roll-Up Door (right side)"}
+    const slides = [
+      { src: image0629, description: "Front Commercial Gate", type: 'image' },
+      { src: image0630, description: "Back Commercial Gate", type: 'image' },
+      { src: image9580, description: "Front Hollow Metal Roll-Up Door", type: 'image' },
+      { src: image9578, description: "Back Hollow Metal Roll-Up Door", type: 'image' },
+      { src: comrollupdoor, type: 'video' },
+      { src: imagebrokendoor1, description: "Before Repair on Roll-Up Door (left side)", type: 'image' },
+      { src: image0248, description: "After Repair on Roll-Up Door (left side)", type: 'image' },
+      { src: imagebrokendoor2, description: "Before Repair on Roll-Up Door (right side)", type: 'image'},
+      { src: image0249, description: "After Repair on Roll-Up Door (right side)", type: 'image'}
     ];
   
     const handleImageClick = (index) => {
@@ -85,7 +86,7 @@ const CommercialModal = (props) => {
 
               {/* new row for video */}
               <div>
-                <video controls height="350" width="350">
+                <video onClick={() => handleImageClick(4)} controls height="350" width="350">
                     <source src={comrollupdoor} type="video/mp4" />
                 </video>
               </div>
@@ -93,11 +94,11 @@ const CommercialModal = (props) => {
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(4)} src={imagebrokendoor1} alt="commerical repair, before on roll-up door left side"></img>
+                  <img onClick={() => handleImageClick(5)} src={imagebrokendoor1} alt="commerical repair, before on roll-up door left side"></img>
                   <p>Before Repair on Roll-Up Door (left side)</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(5)} src={image0248} alt="commerical repair after, on roll-up door left side"></img>
+                  <img onClick={() => handleImageClick(6)} src={image0248} alt="commerical repair after, on roll-up door left side"></img>
                   <p>After Repair on Roll-Up Door (left side)</p>
                 </div>
               </div>
@@ -105,11 +106,11 @@ const CommercialModal = (props) => {
               {/* row 4 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(6)} src={imagebrokendoor2} alt="commerical repair, before on roll-up door right side"></img>
+                  <img onClick={() => handleImageClick(7)} src={imagebrokendoor2} alt="commerical repair, before on roll-up door right side"></img>
                   <p>Before Repair on Roll-Up Door (right side)</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(7)} src={image0249} alt="commerical repair, after on roll-up door right side"></img>
+                  <img onClick={() => handleImageClick(8)} src={image0249} alt="commerical repair, after on roll-up door right side"></img>
                   <p>After Repair on Roll-Up Door (right side)</p>
                 </div>
               </div>
@@ -123,13 +124,25 @@ const CommercialModal = (props) => {
           <Lightbox
             open={lightboxOpen}
             close={() => setLightboxOpen(false)}
-            slides={images}
+            slides={slides}
             index={currentIndex}
             setIndex={setCurrentIndex}
             render={{
               slide: ({ slide }) => (
-                <div style={{ position: "relative", textAlign: "center", zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={slide.src} alt={slide.description} style={{ maxWidth: "100%"}} />
+                <div style={{ textAlign: "center", position: "relative", zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {slide.type === "image" ? (
+                    <img
+                      src={slide.src}
+                      alt={slide.description}
+                      style={{ maxWidth: "100%" }}
+                    />
+                  ) : (
+                    <video
+                      src={slide.src}
+                      controls
+                      style={{ maxWidth: "100%" }}
+                    />
+                  )}
                   <p style={{
                     color: "white",
                     fontSize: "1.2rem",
@@ -137,7 +150,7 @@ const CommercialModal = (props) => {
                     top: 200,
                     zIndex: 2,
                     paddingLeft: "10px",
-                    textShadow: "3px 2px 3px grey, 0 0 1em black, 0 0 0.2em black"    
+                    textShadow: "3px 2px 3px grey, 0 0 1em black, 0 0 0.2em black"
                   }}>
                     {slide.description}
                   </p>

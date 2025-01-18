@@ -150,13 +150,13 @@ const AboutModal = (props) => {
         
         {/* new row for video */}
         <div>
-          <video controls width="350">
+          <video onClick={() => handleImageClick(12)} controls width="350">
               <source src={adgcustomlong} type="video/mp4" />
           </video>
         </div>
 
         <div>
-          <video controls width="350">
+          <video onClick={() => handleImageClick(13)} controls width="350">
               <source src={adgcustomlong2} type="video/mp4" />
           </video>
         </div>

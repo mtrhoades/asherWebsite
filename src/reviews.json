@@ -1,0 +1,19 @@
+[
+    {
+      "name": "Blackburn-Rhoades Ohana",
+      "comment": "Excellent service and quality installation! Definitely recommend!",
+      "rating": 5
+    },
+    {
+      "name": "Jennifer Maria Gaston",
+      "comment": "Professional and timely. Highly recommend!",
+      "rating": 5
+    },
+    { 
+        "name": "Kai Rodriguez",
+        "comment": "Affordable and reliable service.",
+        "rating": 5
+    }
+]
+  
+// https://my-reviews-bucket.s3.us-west-2.amazonaws.com/reviews.json

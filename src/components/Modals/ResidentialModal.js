@@ -69,7 +69,7 @@ const ResidentialModal = (props) => {
 
           {/* new row for video */}
           <div>
-            <video controls width="350">
+            <video onClick={() => handleImageClick(2)} controls width="350">
                 <source src={resbrownback} type="video/mp4" />
             </video>
           </div>
@@ -77,11 +77,11 @@ const ResidentialModal = (props) => {
           {/* row 2 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img onClick={() => handleImageClick(2)} src={image0440} alt="residential garage door blue front"></img>
+              <img onClick={() => handleImageClick(3)} src={image0440} alt="residential garage door blue front"></img>
               <p>Front Garage Door (blue), newly installed</p>
             </div>
             <div>
-              <img onClick={() => handleImageClick(3)} src={image0439} alt="residential garage door blue back"></img>
+              <img onClick={() => handleImageClick(4)} src={image0439} alt="residential garage door blue back"></img>
               <p>Back Garage Door, newly installed</p>
             </div>
           </div>
@@ -89,11 +89,11 @@ const ResidentialModal = (props) => {
           {/* row 3 front/back images*/}
           <div className="servicesGrid">
             <div>
-              <img onClick={() => handleImageClick(4)} src={image9253} alt="residential garage door cedar home front"></img>
+              <img onClick={() => handleImageClick(5)} src={image9253} alt="residential garage door cedar home front"></img>
               <p>Front Garage Door (cedar), newly installed</p>
             </div>
             <div>
-              <img onClick={() => handleImageClick(5)} src={image9252} alt="residential garage door cedar home back"></img>
+              <img onClick={() => handleImageClick(6)} src={image9252} alt="residential garage door cedar home back"></img>
               <p>Back Garage Door, newly installed</p>
             </div>
           </div>

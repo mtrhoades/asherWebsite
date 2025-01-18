@@ -28,6 +28,8 @@ import image9072 from '../../images/Asher garage images/drivewaygates/servicesim
 // videos
 import adgcustomcut from '../../videos/adgcustomcut.mp4';
 import adgbarndoor from '../../videos/adgbarndoor.mp4';
+import knotwoodgate from '../../videos/knotwoodgate.mp4';
+import greengate from '../../videos/greengate.mp4';
 
 const DrivewaygateModal = (props) => {
 
@@ -38,6 +40,7 @@ const DrivewaygateModal = (props) => {
     const slides = [
       { src: image0343, description: "Customized Front Gate (Knot Wood)", type: 'image' },
       { src: image0293, description: "Back Gate (Knot Wood)", type: 'image' },
+      { src: knotwoodgate, type: 'video' },
       { src: image9793, description: "Customized Front Gate", type: 'image' },
       { src: image9794, description: "Back", type: 'image' },
       { src: adgcustomcut, type: 'video'},
@@ -45,6 +48,7 @@ const DrivewaygateModal = (props) => {
       { src: image7677, description: "Customized Gate in Hana with LiftMaster Operator", type: 'image'},
       { src: image0136, description: "Customized Front Gate (green)", type: 'image' },
       { src: image0140, description: "Customized Side Door to go with Gate (green)", type: 'image'},
+      { src: greengate, type: 'video' }, 
       { src: image7679, description: "Solar Powered Operator", type: 'image'},
       { src: image9072, description: "State of the art Key Pad System", type: 'image'},
       { src: adgbarndoor, type: 'video'}
@@ -79,21 +83,28 @@ const DrivewaygateModal = (props) => {
                 </div>
               </div>
 
+              {/* new row for video */}
+              <div>
+                <video onClick={() => handleImageClick(2)} controls width="350">
+                    <source src={knotwoodgate} type="video/mp4" />
+                </video>
+              </div>
+
               {/* row 2 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(2)} src={image9793} alt="automatic driveway gate, custom cut front"></img>
+                  <img onClick={() => handleImageClick(3)} src={image9793} alt="automatic driveway gate, custom cut front"></img>
                   <p>Customized Front Gate</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(3)} src={image9794} alt="automatic driveway gate, custom cut back"></img>
+                  <img onClick={() => handleImageClick(4)} src={image9794} alt="automatic driveway gate, custom cut back"></img>
                   <p>Customized Back Gate</p>
                 </div>
               </div>
 
               {/* new row for video */}
               <div>
-                <video controls width="350">
+                <video onClick={() => handleImageClick(5)} controls width="350">
                     <source src={adgcustomcut} type="video/mp4" />
                 </video>
               </div>
@@ -101,11 +112,11 @@ const DrivewaygateModal = (props) => {
               {/* row 3 front/back images*/}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(4)} src={image7680} alt="automatic driveway gate in hana"></img>
+                  <img onClick={() => handleImageClick(6)} src={image7680} alt="automatic driveway gate in hana"></img>
                   <p>Customized Front Gate in Hana</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(6)} src={image0136} alt="automatic driveway gate, custom green"></img>
+                  <img onClick={() => handleImageClick(7)} src={image0136} alt="automatic driveway gate, custom green"></img>
                   <p>Customized Front Gate (green)</p>
                 </div>
               </div>
@@ -113,30 +124,37 @@ const DrivewaygateModal = (props) => {
               {/* row 4 */}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(5)} src={image7677} alt="automatic driveway gate in hana operator"></img>
+                  <img onClick={() => handleImageClick(8)} src={image7677} alt="automatic driveway gate in hana operator"></img>
                   <p>Customized Gate in Hana with LiftMaster Operator</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(7)} src={image0140} alt="side-door gate, custom green"></img>
+                  <img onClick={() => handleImageClick(9)} src={image0140} alt="side-door gate, custom green"></img>
                   <p>Customized Side Door to go with Gate (green)</p>
                 </div>
+              </div>
+
+              {/* new row for video */}
+              <div>
+                <video onClick={() => handleImageClick(10)} controls width="350">
+                    <source src={greengate} type="video/mp4" />
+                </video>
               </div>
 
               {/* row 5 */}
               <div className="servicesGrid">
                 <div>
-                  <img onClick={() => handleImageClick(8)} src={image7679} alt="solar powered operator"></img>
+                  <img onClick={() => handleImageClick(11)} src={image7679} alt="solar powered operator"></img>
                   <p>Solar Powered Operator</p>
                 </div>
                 <div>
-                  <img onClick={() => handleImageClick(9)} src={image9072}  alt="key pad system"></img>
+                  <img onClick={() => handleImageClick(12)} src={image9072}  alt="key pad system"></img>
                   <p>State of the art Key Pad System</p>
                 </div>
               </div>
 
               {/* new row for video */}
               <div>
-                <video controls width="350">
+                <video onClick={() => handleImageClick(13)} controls width="350">
                     <source src={adgbarndoor} type="video/mp4" />
                 </video>
               </div>

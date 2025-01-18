@@ -1,23 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { MDBBtn } from 'mdb-react-ui-kit';
+// import axios from 'axios';
+
+// const API_BASE_URL = 'https://v7ff91difk.execute-api.us-west-2.amazonaws.com'; // Replace with your API Gateway endpoint
 
 const Testimonials = () => {
+
+
   const [reviews, setReviews] = useState(() => {
     // Retrieve reviews from localStorage or use default reviews
     const savedReviews = localStorage.getItem('reviews');
     return savedReviews ? JSON.parse(savedReviews) : [
       { name: 'Blackburn-Rhoades Ohana', comment: 'Excellent service and quality installation! Definitley Recommend!', rating: 5 },
-      { name: 'Jane Smith', comment: 'Professional and timely. Highly recommend!', rating: 4 },
-      { name: 'Mike Johnson', comment: 'Affordable and reliable service.', rating: 5 },
+      { name: 'Jennifer Maria Gaston', comment: 'Professional and timely. Highly recommend!', rating: 5 },
+      { name: 'Kai Rodriguez', comment: 'Affordable and reliable service.', rating: 5 },
     ];
   });
 
+
+  // const [reviews, setReviews] = useState([]);
   const [newReview, setNewReview] = useState({ name: '', comment: '', rating: 0 });
+
 
   // Save reviews to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem('reviews', JSON.stringify(reviews));
   }, [reviews]);
+
+
+  // useEffect(() => {
+  //   const fetchReviews = async () => {
+  //     try {
+  //       const response = await axios.get(`${API_BASE_URL}/reviews`);
+  //       setReviews(response.data);
+  //       console.log(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching reviews:', error);
+  //     }
+  //   };
+
+  //   fetchReviews();
+  // }, []);
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +57,27 @@ const Testimonials = () => {
       alert('Please fill in all fields and provide a rating.');
     }
   };
+
+
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setNewReview({ ...newReview, [name]: value });
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (newReview.name && newReview.comment && newReview.rating) {
+  //     try {
+  //       await axios.post(`${API_BASE_URL}/reviews`, newReview);
+  //       setReviews([...reviews, newReview]);
+  //       setNewReview({ name: '', comment: '', rating: 0 });
+  //     } catch (error) {
+  //       console.error('Error adding review:', error);
+  //     }
+  //   } else {
+  //     alert('Please fill in all fields and provide a rating.');
+  //   }
+  // };
 
   return (
     <div style={{marginTop: '30px'}} id="testimonials">
