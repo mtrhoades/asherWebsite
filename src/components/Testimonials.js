@@ -1,87 +1,80 @@
 import React, { useState, useEffect } from 'react';
 import { MDBBtn } from 'mdb-react-ui-kit';
-// import axios from 'axios';
 
-// const API_BASE_URL = 'https://v7ff91difk.execute-api.us-west-2.amazonaws.com'; // Replace with your API Gateway endpoint
+const S3_BUCKET_URL = 'https://my-reviews-bucket.s3.us-west-2.amazonaws.com/reviews.json'; // Replace with your S3 bucket URL
+const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/'; // Replace with your API Gateway endpoint
 
 const Testimonials = () => {
-
-
-  const [reviews, setReviews] = useState(() => {
-    // Retrieve reviews from localStorage or use default reviews
-    const savedReviews = localStorage.getItem('reviews');
-    return savedReviews ? JSON.parse(savedReviews) : [
-      { name: 'Blackburn-Rhoades Ohana', comment: 'Excellent service and quality installation! Definitley Recommend!', rating: 5 },
-      { name: 'Jennifer Maria Gaston', comment: 'Professional and timely. Highly recommend!', rating: 5 },
-      { name: 'Kai Rodriguez', comment: 'Affordable and reliable service.', rating: 5 },
-    ];
-  });
-
-
-  // const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [newReview, setNewReview] = useState({ name: '', comment: '', rating: 0 });
 
-
-  // Save reviews to localStorage whenever they change
+  // Fetch reviews from the S3 bucket
   useEffect(() => {
-    localStorage.setItem('reviews', JSON.stringify(reviews));
-  }, [reviews]);
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch(S3_BUCKET_URL);
+        if (!response.ok) {
+          throw new Error('Failed to fetch reviews');
+        }
+        const data = await response.json();
+        setReviews(data); // Assuming `data` is an array of reviews
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
 
-
-  // useEffect(() => {
-  //   const fetchReviews = async () => {
-  //     try {
-  //       const response = await axios.get(`${API_BASE_URL}/reviews`);
-  //       setReviews(response.data);
-  //       console.log(response.data);
-  //     } catch (error) {
-  //       console.error('Error fetching reviews:', error);
-  //     }
-  //   };
-
-  //   fetchReviews();
-  // }, []);
-
+    fetchReviews();
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewReview({ ...newReview, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newReview.name && newReview.comment && newReview.rating) {
-      setReviews([...reviews, newReview]);
-      setNewReview({ name: '', comment: '', rating: 0 });
-    } else {
-      alert('Please fill in all fields and provide a rating.');
-    }
-  };
-
-
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setNewReview({ ...newReview, [name]: value });
-  // };
-
-  // const handleSubmit = async (e) => {
+  // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   if (newReview.name && newReview.comment && newReview.rating) {
-  //     try {
-  //       await axios.post(`${API_BASE_URL}/reviews`, newReview);
-  //       setReviews([...reviews, newReview]);
-  //       setNewReview({ name: '', comment: '', rating: 0 });
-  //     } catch (error) {
-  //       console.error('Error adding review:', error);
-  //     }
+  //     setReviews([...reviews, newReview]);
+  //     setNewReview({ name: '', comment: '', rating: 0 });
   //   } else {
   //     alert('Please fill in all fields and provide a rating.');
   //   }
   // };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (newReview.name && newReview.comment && newReview.rating) {
+      try {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newReview),
+          mode: 'no-cors'
+        });
+  
+        if (!response.ok) {
+          throw new Error('Failed to submit review');
+        }
+  
+        const result = await response.json();
+        console.log(result.message);
+  
+        // Update the local reviews list for immediate feedback
+        setReviews([...reviews, newReview]);
+        setNewReview({ name: '', comment: '', rating: 0 });
+      } catch (error) {
+        console.error('Error submitting review:', error);
+      }
+    } else {
+      alert('Please fill in all fields and provide a rating.');
+    }
+  };
+
   return (
-    <div style={{marginTop: '30px'}} id="testimonials">
-      <h1 style={{color: '#386BC0'}}>Reviews</h1>
+    <div style={{ marginTop: '30px' }} id="testimonials">
+      <h1 style={{ color: '#386BC0' }}>Reviews</h1>
 
       <div className="reviews-list">
         {reviews.map((review, index) => (
@@ -94,7 +87,7 @@ const Testimonials = () => {
       </div>
 
       <div className="review-form">
-        <h3 style={{  color: '#386BC0', textShadow: "2px 1px 2px grey, 0 0 1em white, 0 0 0.2em white" }}>Leave a Review</h3>
+        <h3 style={{ color: '#386BC0', textShadow: "2px 1px 2px grey, 0 0 1em white, 0 0 0.2em white" }}>Leave a Review</h3>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
