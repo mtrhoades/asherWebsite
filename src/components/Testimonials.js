@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
 const S3_BUCKET_URL = 'https://my-reviews-bucket.s3.us-west-2.amazonaws.com/reviews.json'; // Replace with your S3 bucket URL
-const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/'; // Replace with your API Gateway endpoint
+const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/default/add-reviews';
+
+// const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
@@ -51,11 +53,11 @@ const Testimonials = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(newReview),
-          mode: 'no-cors'
         });
   
         if (!response.ok) {
-          throw new Error('Failed to submit review');
+          const errorMessage = await response.text();
+          throw new Error(`Failed to submit review: ${errorMessage}`);
         }
   
         const result = await response.json();
@@ -66,12 +68,13 @@ const Testimonials = () => {
         setNewReview({ name: '', comment: '', rating: 0 });
       } catch (error) {
         console.error('Error submitting review:', error);
+        alert('Failed to submit review. Check the console for details.');
       }
     } else {
       alert('Please fill in all fields and provide a rating.');
     }
   };
-
+  
   return (
     <div style={{ marginTop: '30px' }} id="testimonials">
       <h1 style={{ color: '#386BC0' }}>Reviews</h1>
