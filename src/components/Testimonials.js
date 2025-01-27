@@ -19,7 +19,8 @@ const Testimonials = () => {
           throw new Error('Failed to fetch reviews');
         }
         const data = await response.json();
-        setReviews(data); // Assuming `data` is an array of reviews
+        setReviews(data);
+        console.log(data);
       } catch (error) {
         console.error('Error fetching reviews:', error);
       }
@@ -32,16 +33,6 @@ const Testimonials = () => {
     const { name, value } = e.target;
     setNewReview({ ...newReview, [name]: value });
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (newReview.name && newReview.comment && newReview.rating) {
-  //     setReviews([...reviews, newReview]);
-  //     setNewReview({ name: '', comment: '', rating: 0 });
-  //   } else {
-  //     alert('Please fill in all fields and provide a rating.');
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
