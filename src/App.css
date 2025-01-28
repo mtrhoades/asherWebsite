@@ -82,12 +82,10 @@ h1 {
 }
 
 .carouselContainer {
-  position: relative;
   max-width: 100vw;
   margin: 0 auto;
   overflow: hidden;
   margin-bottom: 20px;
-  z-index: 1;
 }
 
 .carouselContainer img {
@@ -101,7 +99,6 @@ h1 {
   bottom: 0;
   width: 100%;
   background-color: #bbdaf6;
-  z-index: 2;
   pointer-events: none; /* Allow carousel interactions */
 }
 
@@ -132,6 +129,9 @@ h1 {
 @media (max-width: 991px) {
   .breakBar {
     display: none;
+  }
+  .heroContentHeaders {
+    gap: 0px;
   }
 }
 
