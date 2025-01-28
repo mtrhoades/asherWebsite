@@ -12,7 +12,7 @@ const Testimonials = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch(S3_BUCKET_URL);
+        const response = await fetch(`${S3_BUCKET_URL}?timestamp=${Date.now()}`);
         if (!response.ok) {
           throw new Error('Failed to fetch reviews');
         }
@@ -38,9 +38,9 @@ const Testimonials = () => {
       try {
         const response = await fetch(API_URL, {
           method: 'POST',
-          // headers: {
-          //   'Content-Type': 'application/json',
-          // },
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify(newReview),
         });
   
