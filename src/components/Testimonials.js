@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
 const S3_BUCKET_URL = 'https://my-reviews-bucket.s3.us-west-2.amazonaws.com/reviews.json'; // Replace with your S3 bucket URL
-const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/default/add-reviews';
-
-// const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/';
+const API_URL = 'https://kylfj8owfl.execute-api.us-west-2.amazonaws.com/add-reviews';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
@@ -28,7 +26,7 @@ const Testimonials = () => {
 
     fetchReviews();
   }, []);
-
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewReview({ ...newReview, [name]: value });
@@ -40,9 +38,9 @@ const Testimonials = () => {
       try {
         const response = await fetch(API_URL, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          // headers: {
+          //   'Content-Type': 'application/json',
+          // },
           body: JSON.stringify(newReview),
         });
   
