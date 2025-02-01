@@ -96,8 +96,6 @@ h1 {
 }
 
 .hero-overlay {
-  bottom: 0;
-  width: 100%;
   background-color: #bbdaf6;
   pointer-events: none; /* Allow carousel interactions */
 }
@@ -120,6 +118,10 @@ h1 {
   white-space: nowrap;
 }
 
+.heroContentHeaders h2 {
+  font-size: 1.5em;
+}
+
 @media (max-width: 1316px) {
   .heroContentHeaders {
     flex-wrap: wrap;
@@ -132,6 +134,9 @@ h1 {
   }
   .heroContentHeaders {
     gap: 0px;
+  }
+  .heroContentHeaders h2 {
+    font-size: 1em;
   }
 }
 
