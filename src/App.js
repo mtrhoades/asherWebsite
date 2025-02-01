@@ -47,13 +47,27 @@ function App() {
     };
   }, []);
 
+  // Smooth scroll with offset for navbar
+  const handleScrollToSection = (ref) => {
+    const offset = 200; // Adjust this value based on Navbar height
+    if (ref.current) {
+      const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="App">
 
       <Navigation 
-        onServicesClick={() => servicesRef.current?.scrollIntoView({ behavior: 'smooth' })}
-        onContactClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
-        onTestimonialsClick={() => testimonialsRef.current?.scrollIntoView({ behavior: 'smooth' })}
+        onServicesClick={() => handleScrollToSection(servicesRef)}
+        onContactClick={() => handleScrollToSection(contactRef)}
+        onTestimonialsClick={() => handleScrollToSection(testimonialsRef)}
       />
 
       <CarouselHero />
