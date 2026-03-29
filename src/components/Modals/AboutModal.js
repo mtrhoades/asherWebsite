@@ -164,9 +164,9 @@ const AboutModal = (props) => {
         <MDBContainer>
         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
             <p>
-                <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Wailuku,+HI+96793/@20.8915427,-156.551493,13z/data=!3m1!4b1!4m6!3m5!1s0x7954d3425d6317bd:0x2c6350612fb86dba!8m2!3d20.8869433!4d-156.5048344!16zL20vMHMwbmw?entry=ttu&g_ep=EgoyMDI0MTIwOC4wIKXMDSoASAFQAw%3D%3D">
+                <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/1033+Kai+Hele+Ku+St,+Lahaina,+HI+96761/@20.8580284,-156.6385867,17z/data=!3m1!4b1!4m6!3m5!1s0x79552a16b6c6156b:0x7cd3fd1dbbd86fcc!8m2!3d20.8580234!4d-156.6360118!16s%2Fg%2F11c12pxv0x?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D">
                     <MDBIcon icon="home" className="me-2" />
-                    Wailuku, HI 96793, US
+                    1033 Kai Hele Ku St. Lahaina, HI 96761
                 </a>
             </p>
             <p>
